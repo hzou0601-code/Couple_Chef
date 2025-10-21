@@ -1,0 +1,65 @@
+.dish-card {
+    width: 45%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(255, 125, 166, 0.35);
+      background-color: #fff5f8;
+    }
+  
+    .dish-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 16px;
+      margin-bottom: 12px;
+      background-color: #fff0f5;
+      object-fit: cover;
+      border: 3px solid rgba(255, 182, 193, 0.4);
+      transition: transform 0.4s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  
+    .dish-name {
+      font-size: 30px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+  
+    .dish-desc {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 10px;
+      min-height: 32px;
+    }
+  
+    .status {
+      font-size: 26px;
+      font-weight: 500;
+      margin-top: auto; // 保持状态文字贴底
+      padding-top: 8px;
+  
+      &.available {
+        color: #4caf50; // 柔和绿色
+      }
+  
+      &.unavailable {
+        color: #ff7da6; // 柔和粉色
+      }
+    }
+  }
+  
