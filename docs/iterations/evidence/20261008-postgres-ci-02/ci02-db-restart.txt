@@ -1,0 +1,1 @@
+PASS: PostgreSQL service stopped/restarted; inventory quantity persisted as 1.250

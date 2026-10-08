@@ -1,0 +1,78 @@
+name: Backend verification
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  h2:
+    name: H2 tests and backend build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Test and build with strict dependency locks
+        working-directory: backend
+        run: bash gradlew test bootJar --no-daemon --console=plain
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: backend-h2-evidence
+          path: |
+            backend/build/reports/tests/
+            backend/build/test-results/
+            backend/build/libs/*.jar
+          retention-days: 7
+
+  postgres:
+    name: PostgreSQL 16 integration and persistence
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: couplechef_test
+          POSTGRES_USER: couplechef
+          POSTGRES_PASSWORD: disposable-ci-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U couplechef -d couplechef_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DB_URL: jdbc:postgresql://localhost:5432/couplechef_test
+      TEST_DB_USER: couplechef
+      TEST_DB_PASSWORD: disposable-ci-password
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Test real database migrations, API rules and application restart
+        working-directory: backend
+        run: bash gradlew test bootJar --no-daemon --console=plain
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: backend-postgres-evidence
+          path: |
+            backend/build/reports/tests/
+            backend/build/test-results/
+          retention-days: 7

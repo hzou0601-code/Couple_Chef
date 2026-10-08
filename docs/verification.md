@@ -27,3 +27,10 @@ Java17已下载到项目忽略目录.tools/jdk17/jdk-17.0.20.1+1，官方Adoptiu
 最终工作树 `test bootJar`成功（Java17/Gradle8.14.3），15项测试、0失败：上下文1、菜单回归1、库存13。锁脚本隔离集成测试通过，TOML语法通过，diff空白检查通过。证据：iterations/evidence/20261008-inventory-api-01/summary.json和gradle-final.txt；完整本地测试报告backend/build/reports/tests/test/index.html。
 
 首轮曾因Application只扫描menu仓库失败，已修复并全部重跑；最终结果包括新增小数版本号拒绝测试。编译UTF-8明确配置。Gradle存在9.0不兼容弃用提示，当前不升级包装器。真实PostgreSQL、远程CI、前端构建/交互、迁移恢复与部署均未执行。
+
+## 20261008-postgres-ci-02
+本地真实PostgreSQL16.4全部16测试通过（不跳过），H2的15通用测试通过且仅PG专用1项跳过；两个环境均无--write-locks执行test bootJar成功。数据库服务停止/重启探针与应用上下文重启持久化均通过。actionlint1.7.12静态验证通过。证据见iterations/evidence/20261008-postgres-ci-02；远程结果待本轮最终记录。
+
+连接真实测试库：设置TEST_DB_URL=jdbc:postgresql://127.0.0.1:15432/couplechef_test、TEST_DB_USER和TEST_DB_PASSWORD后执行backend/gradlew.bat test bootJar --no-daemon --console=plain。仅限独立测试数据库，接口测试会清理表；不要指向现有家庭库存库。不设置TEST_DB_*时使用H2。外部DB测试禁用缓存与UP-TO-DATE；切换环境会重跑测试。更新依赖时显式--write-locks并审查锁差异，常规验证/CI禁止自动改锁。
+
+现有PostgreSQL安装可用于本地测试，不需要启动Docker。Compose与CI使用PostgreSQL16，Flyway上游支持版本提示保留在日志，T006评估依赖维护；不把警告当失败，也不声称上游已支持该版本。数据库备份恢复、完整CI门禁、微信和部署仍未验收。

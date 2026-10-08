@@ -1,0 +1,72 @@
+{
+  "results": {
+    "postgres16.4": [
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.ApplicationTests",
+        "errors": 0
+      },
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.menu.MenuReadRegressionTests",
+        "errors": 0
+      },
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.storage.PostgresPersistenceTests",
+        "errors": 0
+      },
+      {
+        "tests": 13,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.storage.StorageApiTests",
+        "errors": 0
+      }
+    ],
+    "h2": [
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.ApplicationTests",
+        "errors": 0
+      },
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.menu.MenuReadRegressionTests",
+        "errors": 0
+      },
+      {
+        "tests": 1,
+        "failed": 0,
+        "skipped": 1,
+        "suite": "com.couplechef.storage.PostgresPersistenceTests",
+        "errors": 0
+      },
+      {
+        "tests": 13,
+        "failed": 0,
+        "skipped": 0,
+        "suite": "com.couplechef.storage.StorageApiTests",
+        "errors": 0
+      }
+    ]
+  },
+  "runId": "20261008-postgres-ci-02",
+  "baseCommit": "6140464",
+  "databaseRestart": "PASS quantity 1.250 retained; probe cleaned",
+  "remoteCI": "pending",
+  "actionlint": "1.7.12 PASS",
+  "postgresWarning": "Flyway managed by Spring Boot3.2 says PG16 is newer than tested support; real PG16.4 tests passed",
+  "deployment": "not run",
+  "dependencyLocks": "strict; validation commands did not write locks"
+}
