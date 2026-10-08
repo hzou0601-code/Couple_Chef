@@ -8,8 +8,8 @@
 - 前端：下一库存页面迭代按现有yarn锁文件安装，类型/静态检查及build:weapp；微信开发者工具实际交互另验证。
 - git diff --check；确认无真实密钥。
 
-## 当前限制
-基线只有Java26，不保证Gradle8.14.3/Spring Boot3.2支持；无可用Docker/gh命令，前端无node_modules，未见CI。没有真实AppID/合法API域名、数据库服务凭据和生产权限。网络/工具不足按步骤记录，不关闭检查。
+## 环境与当前限制
+第一轮基线仅Java26且未发现Docker/gh、无CI；现已有项目本地Java17、系统PG16.4和Docker CLI（引擎未启动），后端GitHub CI已运行成功。前端无node_modules、微信AppID/合法API域名未配置，无产品数据库部署凭据和生产权限。网络/工具不足按步骤记录，不关闭检查。
 
 Java17已下载到项目忽略目录.tools/jdk17/jdk-17.0.20.1+1，官方Adoptium元数据与SHA256核对记录在本轮历史。运行时仅设置当前命令JAVA_HOME，未改系统Java。
 
@@ -29,7 +29,9 @@ Java17已下载到项目忽略目录.tools/jdk17/jdk-17.0.20.1+1，官方Adoptiu
 首轮曾因Application只扫描menu仓库失败，已修复并全部重跑；最终结果包括新增小数版本号拒绝测试。编译UTF-8明确配置。Gradle存在9.0不兼容弃用提示，当前不升级包装器。真实PostgreSQL、远程CI、前端构建/交互、迁移恢复与部署均未执行。
 
 ## 20261008-postgres-ci-02
-本地真实PostgreSQL16.4全部16测试通过（不跳过），H2的15通用测试通过且仅PG专用1项跳过；两个环境均无--write-locks执行test bootJar成功。数据库服务停止/重启探针与应用上下文重启持久化均通过。actionlint1.7.12静态验证通过。证据见iterations/evidence/20261008-postgres-ci-02；远程结果待本轮最终记录。
+本地真实PostgreSQL16.4全部16测试通过（不跳过），H2的15通用测试通过且仅PG专用1项跳过；两个环境均无--write-locks执行test bootJar成功。数据库服务停止/重启探针与应用上下文重启持久化均通过。actionlint1.7.12静态验证通过。证据见iterations/evidence/20261008-postgres-ci-02。
+
+远程GitHub Actions运行37730162383已completed/success，head_sha=e2d23456375c47b4b64485fd2be833bf28687a96；H2 tests/build与PostgreSQL16 integration/persistence两个job及其test/build步骤均success，证据remote-ci.json。只代表该实现提交的后端CI；后续纯文档提交不更改被测代码，不把此结果说成其他SHA的执行。未部署、未提审，main未合并。
 
 连接真实测试库：设置TEST_DB_URL=jdbc:postgresql://127.0.0.1:15432/couplechef_test、TEST_DB_USER和TEST_DB_PASSWORD后执行backend/gradlew.bat test bootJar --no-daemon --console=plain。仅限独立测试数据库，接口测试会清理表；不要指向现有家庭库存库。不设置TEST_DB_*时使用H2。外部DB测试禁用缓存与UP-TO-DATE；切换环境会重跑测试。更新依赖时显式--write-locks并审查锁差异，常规验证/CI禁止自动改锁。
 

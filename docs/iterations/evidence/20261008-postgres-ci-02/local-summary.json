@@ -64,7 +64,7 @@
   "runId": "20261008-postgres-ci-02",
   "baseCommit": "6140464",
   "databaseRestart": "PASS quantity 1.250 retained; probe cleaned",
-  "remoteCI": "pending",
+  "remoteCI": "success for e2d23456375c47b4b64485fd2be833bf28687a96; see remote-ci.json",
   "actionlint": "1.7.12 PASS",
   "postgresWarning": "Flyway managed by Spring Boot3.2 says PG16 is newer than tested support; real PG16.4 tests passed",
   "deployment": "not run",

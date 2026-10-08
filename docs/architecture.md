@@ -14,3 +14,10 @@
 
 ## 恢复与运行锁
 每轮使用 scripts/iteration-lock.ps1 acquire/renew/release；.iteration/active.lock 记录 runId/startedAt/expiresAt，默认2小时。未过期直接退出不修改；长任务续租。guard互斥序列化操作，完整临时JSON通过不覆盖Move发布新锁或File.Replace原子续租。过期先查看检查点/Git，不回滚，再归档旧锁并获取。释放必须匹配runId。损坏锁默认拒绝，先检查Git/检查点且最后写入已超过最大租约240分钟后才可acquire -RecoverCorrupt隔离并恢复。运行数据不入Git。
+
+## 真实数据库验证与CI（T001V）
+- 默认H2仅作快速回归；TEST_DB_*显式指定独立测试库，真实PG测试必须检查数据库产品为PostgreSQL，关闭/重开应用与连接池读取持久化库存。
+- 外部数据库状态不由源文件决定，因此其测试禁用Gradle跳过/缓存；URL参与任务输入，不将密码作为输入或写入证据。
+- Gradle严格依赖锁与wrapper分发校验；CI分两个干净Ubuntu job运行H2和PG16，固定action SHA、只读仓库权限，不部署。
+- 本地已有PG16.4二进制，创建项目内临时独立测试集群；测试结束停止，只保留忽略目录中的数据/日志。CI使用一次性服务和示例凭据，无产品数据或真实密钥。
+- 当前Spring Boot管理的Flyway对PG16有上游未测试提示，本地PG16.4已实测通过；依赖支持维护由T006评估，不通过关闭迁移校验处理警告。
