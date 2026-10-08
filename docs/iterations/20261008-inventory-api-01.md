@@ -34,3 +34,4 @@
 - 本轮T001实现和本地验证完成；真实PostgreSQL接口/迁移未验收，因此下一唯一任务T001V：真实PG验证和后端CI基础。前端仍待T002，不宣称主链路或MVP完成。
 - 本轮关联提交通过本运行编号定位：`git log --all --grep=20261008-inventory-api-01`；提交后交付页补充提交ID。
 - strict_reviewer最终复审未发现剩余P0–P3缺陷，可接受本地API/H2/构建范围；报告保存在evidence/20261008-inventory-api-01/review.md，真实PG/CI/微信仍待验收。
+- 实现提交：3d4bdd1（codex/inventory-api，仅本地）；后续文档提交补记此ID。最终暂存差异空白检查通过；入库构建日志仅去除行尾空格，原始日志保留.tools/backend-validation-final.log。交付后释放本运行锁，下一轮读取此检查点执行T001V。

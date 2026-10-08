@@ -3,7 +3,7 @@
 <title>Couple Chef · MVP 交付</title>
 <style>body{font:16px/1.7 system-ui,sans-serif;max-width:1080px;margin:32px auto;padding:0 24px;background:#fff9fb;color:#302a2c}h1,h2{color:#873e59}table{border-collapse:collapse;width:100%;background:white}td,th{border:1px solid #eadce1;padding:8px;text-align:left}a{color:#873e59}.status{padding:16px;background:#ffe5ec;border-radius:12px}</style>
 <h1>Couple Chef · MVP 交付</h1>
-<p class="status">整体：进行中｜本轮阶段：交付｜运行：20261008-inventory-api-01｜更新：2026-10-08 15:32（Australia/Sydney）</p>
+<p class="status">整体：进行中｜本轮阶段：交付完成，真实PG待验收｜运行：20261008-inventory-api-01｜更新：2026-10-08（Australia/Sydney）</p>
 <h2>范围与平台</h2><p>冰箱库存 → 双模式晚餐推荐 → 确认完成做饭 → 幂等扣库存。统一小程序界面。现有项目为 Taro 4.1.7 / React 18 / TypeScript 与 Spring Boot 3.2 / Java 17 / Gradle。project.config.json 的 compileType=miniprogram，按微信小程序推进；真实 AppID 和测试环境待提供。无付费 AI。</p>
 <p>先读：<a href="docs/requirements.md">需求与验收</a> · <a href="docs/architecture.md">架构与决策</a> · <a href="docs/backlog.md">稳定任务待办</a> · <a href="docs/verification.md">验证与环境</a> · <a href="docs/api.md">库存API契约</a> · <a href="docs/review-agent.md">严格审查agent</a> · <a href="docs/iterations/20261008-inventory-api-01.md">本轮记录</a></p>
 <h2>MVP 验收</h2><ul><li>□ 库存新增/编辑/删除/查看、搜索/分类/临期、重复/不足/空库存处理。</li><li>□ 两种推荐模式、结构化菜谱、单位兼容、理由/用料/份量/步骤、缺料与购物清单、假设与不足解释。</li><li>□ 确认做饭后事务扣减、重复请求幂等、并发与库存不足测试。</li><li>□ 统一设计变量/组件；主要页面加载/空/错误/成功；微信运行交互验证。</li><li>□ 独立数据库与迁移、API契约/输入校验/统一错误、无密钥环境示例。</li><li>□ 格式/静态/类型、单元/集成/E2E、前后端构建、迁移恢复与远程CI证据。</li></ul>
@@ -13,5 +13,5 @@
 <p>唯一首选下一任务：T001V 真实 PostgreSQL 接口/迁移验证与后端 CI 基础（再完成 T001 验收）；环境仍受限时记录新证据，并处理不依赖该验证的前端准备。</p>
 <h2>本轮验证</h2><p>Java17 / Gradle8.14.3：<code>gradlew.bat test bootJar --no-daemon --console=plain</code> 成功，15测试/0失败；包括CRUD、重复/并发创建、输入边界、临期/搜索、版本冲突和原菜单回归。<code>scripts/test-iteration-lock.ps1</code>通过；<code>git diff --check</code>通过；agent TOML语法通过。<a href="docs/iterations/evidence/20261008-inventory-api-01/summary.json">测试与产物摘要</a> · <a href="docs/iterations/evidence/20261008-inventory-api-01/gradle-final.txt">最终构建日志</a>。独立审查已修复发现的问题，最终结论见本轮记录。</p>
 <h2>限制与证据</h2><p>仅H2自动化通过，真实PostgreSQL迁移/恢复未执行（未发现Docker/数据库服务）；数据库配置已准备。前端仍为占位页面，依赖未安装且yarn.lock被忽略；无CI配置。旧菜单available布尔值不能作为库存推荐。Java17已下载校验，仅用于当前命令。审查配置已保存并有独立agent实际审查，新会话自动加载尚未验证。</p>
-<p>关联提交：本轮交付提交（提交前此处暂用运行编号），当前分支 codex/inventory-api；本地与远程基线78c3599一致。远程CI/部署/平台审核：未运行。真实AppID/合法域名与访问边界待确认；默认后端仅本地监听。生产发布/正式提审：未授权。</p>
+<p>关联实现提交：<code>3d4bdd1</code>（feat(storage): implement inventory API and strict review agent）；当前分支 codex/inventory-api，提交仅本地；本轮另有文档记录提交。本地与远程初始基线78c3599一致。远程CI/部署/平台审核：未运行。真实AppID/合法域名与访问边界待确认；默认后端仅本地监听。生产发布/正式提审：未授权。</p>
 </html>
