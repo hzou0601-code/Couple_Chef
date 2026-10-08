@@ -40,7 +40,7 @@ public class Dish {
     private String tags;
 
     /** 预留字段：菜谱步骤文本（未来可拆分到独立表） */
-    @Lob
+    @Column(columnDefinition = "text")
     private String recipeSteps;
 
     /** 最近更新时间 */

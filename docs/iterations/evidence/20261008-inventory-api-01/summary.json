@@ -1,0 +1,58 @@
+{
+  "validation": "local only",
+  "reviewerConfig": "TOML parse valid; runtime auto-loading not verified",
+  "runId": "20261008-inventory-api-01",
+  "wechat": "not run",
+  "deployment": "not run",
+  "java": "Eclipse Adoptium 17.0.20.1+1",
+  "gradle": "8.14.3",
+  "lockTest": "PASS: isolated lifecycle, contention, owner mismatch, expired/corrupt recovery",
+  "database": "H2 PostgreSQL compatibility mode; not real PostgreSQL",
+  "remoteCI": "not run",
+  "suites": [
+    {
+      "tests": 1,
+      "errors": 0,
+      "failures": 0,
+      "suite": "com.couplechef.ApplicationTests",
+      "cases": [
+        "contextLoads()"
+      ]
+    },
+    {
+      "tests": 1,
+      "errors": 0,
+      "failures": 0,
+      "suite": "com.couplechef.menu.MenuReadRegressionTests",
+      "cases": [
+        "menuCollectionsSerializeWithOpenInViewDisabled()"
+      ]
+    },
+    {
+      "tests": 13,
+      "errors": 0,
+      "failures": 0,
+      "suite": "com.couplechef.storage.StorageApiTests",
+      "cases": [
+        "staleUpdateAndDeleteNeverOverwrite()",
+        "compatibilityWhitespaceCannotBypassDuplicateOrSearch()",
+        "duplicateNormalizationAndBatchBoundaries()",
+        "searchCategoryAndExpiryIncludeExpiredButExcludeUndated()",
+        "[1] quantity=-1",
+        "[2] quantity=0.0001",
+        "[3] quantity=1000000000",
+        "[4] quantity=NaN",
+        "fractionalVersionIsRejectedWithoutChangingInventory()",
+        "crudAndEmptyStock()",
+        "editingIntoExistingBatchRollsBack()",
+        "concurrentDuplicateCreatesOnlyOneBatch()",
+        "rejectsMissingFieldsInvalidUnitsDatesAndQueries()"
+      ]
+    }
+  ],
+  "jar": {
+    "bytes": 48714044,
+    "sha256": "A1084C7E417756E22979A3FFB02B1257060C3832F9D13575AB2BB5E635235D7E",
+    "name": "demo-0.0.1-SNAPSHOT.jar"
+  }
+}

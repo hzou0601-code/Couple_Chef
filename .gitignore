@@ -1,3 +1,7 @@
+# Iteration state and local tool downloads
+.iteration/
+.tools/
+
 # ===============================
 # 🧱 通用系统与编辑器
 # ===============================

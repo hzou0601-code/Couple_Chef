@@ -2,6 +2,7 @@ package com.couplechef.menu.repository;
 
 import com.couplechef.menu.model.Dish;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
@@ -11,10 +12,18 @@ import java.util.List;
  * 菜品数据访问层，基于 Spring Data JPA。
  */
 public interface DishRepository extends JpaRepository<Dish, Long> {
+    @Override
+    @EntityGraph(attributePaths = "ingredients")
+    List<Dish> findAll();
+
+    @Override
+    @EntityGraph(attributePaths = "ingredients")
+    java.util.Optional<Dish> findById(Long id);
 
     /**
      * 查询所有可做的菜（available = true）
      */
+    @EntityGraph(attributePaths = "ingredients")
     List<Dish> findByAvailableTrue();
 
     /**
