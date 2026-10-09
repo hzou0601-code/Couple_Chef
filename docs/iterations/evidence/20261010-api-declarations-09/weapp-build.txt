@@ -1,0 +1,306 @@
+👽 Taro v4.1.7
+
+Tips:
+1. 建议开启持久化缓存功能，能有效提升二次编译速度，详情请参考: https://docs.taro.zone/docs/config-detail#cache。
+
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+
+● Webpack █████████████████████████  (0%)  
+ 
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ setup (2%)  
+ run
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ setup (9%) compilation 
+ mini-css-extract-plugin
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ setup (9%) compilation 
+ CssMinimizerPlugin
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (10%) 0/12 entries 12/12 dependen
+cies 0/12 modules 1 active 
+ babel-loader › src\app.config.ts
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (10%) 0/12 entries 12/12 dependen
+cies 0/12 modules 1 active 
+ babel-loader › src\app.config.ts
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (10%) 0/12 entries 12/12 dependen
+cies 0/12 modules 2 active 
+ babel-loader › src\app.ts
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (10%) 0/12 entries 12/12 dependen
+cies 1/12 modules 11 active 
+ ...l-loader › node_modules\@tarojs\webpack5-runner\dist\template\custom-wrapp
+er.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 29/50 dependen
+cies 5/23 modules 15 active 
+ babel-loader › src\store\menuStore.ts
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%)  
+ import loader .\node_modules\css-loader\dist\cjs.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%)  
+ import loader .\node_modules\postcss-loader\dist\cjs.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%)  
+ import loader .\node_modules\resolve-url-loader\index.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%)  
+ import loader .\node_modules\sass-loader\dist\cjs.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 32/50 dependen
+cies 5/26 modules 19 active 
+ ... postcss-loader › resolve-url-loader › sass-loader › src\pages\index\index
+.scss
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 32/51 dependen
+cies 5/26 modules 20 active 
+ ...ss
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 56/67 dependen
+cies 6/36 modules 28 active 
+ ...ostcss-loader › resolve-url-loader › sass-loader › src\pages\storage\index
+.scss
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 83/109 depende
+ncies 7/57 modules 41 active 
+ babel-loader › node_modules\@tarojs\runtime\dist\bom\document.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 101/109 depend
+encies 7/74 modules 51 active 
+ babel-loader › node_modules\@tarojs\runtime\dist\dom\form.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 103/163 depend
+encies 12/76 modules 63 active 
+ ...der › resolve-url-loader › sass-loader › src\components\ActionButton\index
+.scss
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 172/206 depend
+encies 24/80 modules 53 active 
+ babel-loader › node_modules\@tarojs\runtime\dist\dom\document.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 188/225 depend
+encies 26/86 modules 60 active 
+ ...abel-loader › node_modules\@tarojs\runtime\dist\dom-external\inner-html\ht
+ml.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 209/250 depend
+encies 32/93 modules 59 active 
+ ...el-loader › node_modules\@tarojs\runtime\dist\dom-external\inner-html\pars
+er.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 248/262 depend
+encies 34/96 modules 62 active 
+ ...nd\couplechef-frontend\node_modules\@babel\runtime\helpers\esm\toPropertyK
+ey.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 272/275 depend
+encies 35/116 modules 72 active 
+ ...tend\couplechef-frontend\node_modules\@babel\runtime\helpers\esm\toPrimiti
+ve.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (32%) 5/12 entries 286/286 depend
+encies 53/119 modules 65 active 
+ ...s
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (51%) 9/12 entries 293/297 depend
+encies 94/121 modules 26 active 
+ babel-loader › node_modules\@tarojs\api\dist\tools.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (51%) 9/12 entries 298/299 depend
+encies 96/124 modules 28 active 
+ babel-loader › node_modules\@tarojs\api\dist\interceptor\chain.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (51%) 9/12 entries 301/301 depend
+encies 103/125 modules 22 active 
+ node_modules\scheduler\index.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ building (51%) 9/12 entries 306/306 depend
+encies 105/128 modules 23 active 
+ node_modules\scheduler\cjs\scheduler.production.min.js
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (70%)  
+ plugins
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (87%)  
+ code generation
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (92%)  
+ asset processing
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (92%) asset processing 
+ TaroMiniPlugin
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (92%) asset processing 
+ CssMinimizerPlugin
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+● Webpack █████████████████████████ sealing (92%) asset processing 
+ RealContentHashPlugin
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+√ Webpack
+  Compiled successfully in 26.17s
+
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme

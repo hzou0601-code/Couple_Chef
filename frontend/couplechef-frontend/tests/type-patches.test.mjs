@@ -31,7 +31,7 @@ function fixture(t, packageName = '@tarojs/components') {
 
 test('nested API patches retain version/content/path guards and partial-run recovery', t => {
   const f = fixture(t, '@tarojs/taro')
-  assert.throws(() => applyTypePatches(f.root, { ...f.manifest, files: [{ ...f.manifest.files[0], path: 'types/api/device/sms.d.ts' }] }), /Invalid/)
+  assert.throws(() => applyTypePatches(f.root, { ...f.manifest, files: [{ ...f.manifest.files[0], path: 'types/api/device/other.d.ts' }] }), /Invalid/)
   writeFileSync(join(f.packageRoot, f.manifest.files[1].path), 'unknown edit')
   assert.throws(() => applyTypePatches(f.root, f.manifest), /Unknown/)
   assert.equal(readFileSync(join(f.packageRoot, f.manifest.files[0].path), 'utf8'), f.before)

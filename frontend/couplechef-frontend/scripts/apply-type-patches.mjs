@@ -8,7 +8,7 @@ const digest = text => createHash('sha256').update(text).digest('hex')
 export function applyTypePatches(projectRoot, manifest, beforePublish) {
   const allowedPath = {
     '@tarojs/components': /^types\/[A-Za-z]+\.d\.ts$/,
-    '@tarojs/taro': /^types\/api\/(network\/request|cloud\/index)\.d\.ts$/,
+    '@tarojs/taro': /^types\/api\/(network\/request|cloud\/index|device\/sms|framework\/index)\.d\.ts$/,
   }[manifest.package]
   if (!allowedPath) throw new Error('Unsupported patch package')
   const packageRoot = resolve(projectRoot, 'node_modules', manifest.package)
@@ -51,7 +51,7 @@ export function applyTypePatches(projectRoot, manifest, beforePublish) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-  for (const name of ['components-4.1.7.json', 'taro-request-4.1.7.json']) {
+  for (const name of ['components-4.1.7.json', 'taro-request-4.1.7.json', 'taro-basic-api-4.1.7.json']) {
     const manifest = JSON.parse(readFileSync(resolve(projectRoot, 'type-patches', name), 'utf8'))
     console.log(`Applied ${applyTypePatches(projectRoot, manifest)} ${manifest.package} declaration patches (others already applied)`)
   }

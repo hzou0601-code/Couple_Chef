@@ -37,3 +37,21 @@ declare const cloud: Taro.Cloud
 cloud.callContainer<Response, string>({ path: '/api/storage', data: 'text' })
 // @ts-expect-error Cloud instance overload also rejects boolean payload
 cloud.callContainer<Response, boolean>({ path: '/api/storage', data: true })
+
+Taro.sendSms({ phoneNumber: '10086', content: 'example' }).then(result => {
+  const message: string = result.errMsg
+  // @ts-expect-error SMS response is a CallbackResult, not an untyped value
+  const invalid: number = result.errMsg
+  void message
+  void invalid
+})
+// @ts-expect-error SMS phoneNumber must be a string
+Taro.sendSms({ phoneNumber: 10086 })
+const application = Taro.getApp<{ household: { name: string } }>({ allowDefault: true })
+const householdName: string = application.household.name
+// @ts-expect-error app generic preserves custom field types
+const invalidHousehold: number = application.household.name
+// @ts-expect-error an App instance cannot be a numeric primitive
+Taro.getApp<number>()
+void householdName
+void invalidHousehold

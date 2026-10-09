@@ -1,0 +1,2 @@
+{"runId":"20261010-api-declarations-09","base":"28f1c6b","testsPassed":23,"testsFailed":0,"inventoryTypes":"exit0","publicContracts":"exit0; scoped skipLibCheck, full gate separate","eslint":"exit0","actionlint":"exit0","officialOriginalSha":"matched archived package","frozenInstall":"already up-to-date; all postinstall manifests idempotent","fullTypes":{"exit":2,"before":52,"after":50},"weapp":"exit0","remoteCurrent":"not executed","database":"untouched","userChanges":"README/compose retained and excluded"}
+

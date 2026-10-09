@@ -1,0 +1,28 @@
+{
+  "package": "@tarojs/taro",
+  "version": "4.1.7",
+  "files": [
+    {
+      "path": "types/api/device/sms.d.ts",
+      "beforeSha256": "ca937e99ba4de3cf67daf293bbf520b84ebb3faf780303d9bd515416f816d090",
+      "afterSha256": "201c3e118bfb93606b434d8bd1882c3929c35d17f1db2129d8b794d4a69660cb",
+      "edits": [
+        {
+          "before": "Promise<TaroGeneral.CallbackResul>",
+          "after": "Promise<TaroGeneral.CallbackResult>"
+        }
+      ]
+    },
+    {
+      "path": "types/api/framework/index.d.ts",
+      "beforeSha256": "76ea22087e2290228e7b7a6b91243c7e9291388f3e899300726d005ce9d25db3",
+      "afterSha256": "72ed6543e9dd2a786662ad23033faf5b0909c3a6781355c2d96ca71a5ace7583",
+      "edits": [
+        {
+          "before": "getApp<T = TaroGeneral.IAnyObject>",
+          "after": "getApp<T extends App = TaroGeneral.IAnyObject>"
+        }
+      ]
+    }
+  ]
+}
