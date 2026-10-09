@@ -41,3 +41,7 @@ Java17已下载到项目忽略目录.tools/jdk17/jdk-17.0.20.1+1，官方Adoptiu
 T002A仅客户端：Node24直接执行实际TypeScript核心，10测试通过；TypeScript5.9.3严格检查核心与Taro.request封装、global.d.ts通过，声明来自已核对yarn.lock SHA512的真实Taro4.1.7包；使用skipLibCheck，不检查完整依赖声明或整个工程/config。完整安装后可用`yarn typecheck:api`复现聚焦检查。本轮实际命令与临时真实包映射配置见iterations/20261009-inventory-client-03.md，日志在对应evidence目录。
 
 客户端测试无额外依赖：Node24运行`node --test tests/storage-client.test.mjs`；存在模块类型推断提示，未关闭检查或改工程模块体系掩盖。新增Inventory client tests工作流同命令，远程结果须按实现SHA记录。actionlint通过。全项目类型、前端构建、真机请求/页面交互未执行；原后端证据不混作本轮前端验证。
+
+远程证据：实现SHA2978692b2c102c9c08faca4ba37c100fbb9fe879，客户端运行37875308860、后端运行37875308815均completed/success，工作/步骤见iterations/evidence/20261009-inventory-client-03/remote-ci.json。此结果不代表完整前端构建或微信验收。
+
+远程证据：实现SHA2978692b2c102c9c08faca4ba37c100fbb9fe879，客户端运行37875308860、后端运行37875308815均completed/success，工作/步骤见iterations/evidence/20261009-inventory-client-03/remote-ci.json。此结果不代表完整前端构建或微信验收。

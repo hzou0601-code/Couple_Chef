@@ -15,7 +15,7 @@ T002拆分：T002A库存API客户端 → T002B只读列表/搜索与加载空错
 来自finfin/awesome-frontend-skills目录的wshobson/agents react-state-management，提交46891e7e60da0e52baf1050b7b6391b64e84c6d9，已完整读取plugins/frontend-mobile-development/skills/react-state-management/SKILL.md。采用Type everything、Separate concerns、Don't duplicate server state；本轮客户端保持无状态，不引入React Query/额外状态库，不套用DOM/React Router示例。原文缓存.tools/react-state-management-SKILL.md。
 
 ## 检查点
-实现完成，验证阶段；先前两轮验证证据保留，未更改用户已有代码。
+交付完成，T002A限定范围验收通过；先前两轮验证证据保留，未更改用户已有代码。
 
 ## 实现与验证
 - Taro.request轻适配器与纯无状态类型化客户端，覆盖CRUD/version、过滤编码（含0天）、规范化API根地址。请求超时10秒；不自动重试写请求、不toast、不假数据回退；返回拆出的data，错误通过Promise rejection交给页面。
@@ -23,5 +23,15 @@ T002拆分：T002A库存API客户端 → T002B只读列表/搜索与加载空错
 - strict_reviewer复现非法端口/空host/破损IPv6地址通过校验、无效日期被接受两项P2。均已修复并加回归；MVP配置明确只支持DNS/IPv4根地址，不支持IPv6字面地址。
 - Node24直接执行实际.ts，10项测试通过；仅有MODULE_TYPELESS_PACKAGE_JSON解析提示，保留现有CommonJS/Babel工程配置，不为消除此提示改模块体系。
 - TypeScript5.9.3与Taro4.1.7均按现有yarn.lock的完整SHA512核对下载至.tools；使用真实官方类型严格检查storageClient.ts/storage.ts与global.d.ts，通过。聚焦配置tsconfig.inventory.json可在完整依赖安装后复用，本轮临时配置只映射.tools内真实Taro类型且skipLibCheck，不声称全项目检查。
-- 新增Inventory client tests CI仅Node24内置测试，不安装任何额外依赖；远程执行结果待对应提交验证。后端工作流不改动。
+- 新增Inventory client tests CI仅Node24内置测试，不安装任何额外依赖；远程运行37875308860已按实现SHA核对成功。后端工作流不改动。
 - 整个前端依赖尚未安装、微信构建/交互未执行，T002整体仍未验收。
+
+## 交付
+实现提交2978692b2c102c9c08faca4ba37c100fbb9fe879已推送codex/inventory-api。GitHub客户端运行37875308860与后端运行37875308815均completed/success；工作/步骤证据remote-ci.json。独立审查最终无剩余可行动缺陷，见evidence同目录review.md。
+
+本轮T002A验收通过；T002整体与MVP未验收。下一轮唯一首选T002B：冻结锁安装、只读列表/搜索与加载空错状态、设计变量/组件及微信构建。完整类型检查/微信构建/实际请求与页面交互仍未执行；无部署、未合并main、未正式提审。随后纯证据文档提交不冒称已运行其他SHA的CI。
+
+## 交付
+实现提交2978692b2c102c9c08faca4ba37c100fbb9fe879已推送codex/inventory-api。客户端运行37875308860与后端运行37875308815均completed/success；工作/步骤证据在evidence同目录remote-ci.json。独立审查最终无剩余可行动缺陷，见review.md。
+
+T002A验收通过；T002整体与MVP未验收。唯一下一任务T002B：冻结锁安装、只读列表/搜索与加载空错状态、设计变量/组件及微信构建。完整前端类型/构建/真实请求与页面交互未执行，无部署、未合并main、未正式提审。后续证据文档提交不冒称其他SHA已运行CI。
