@@ -55,3 +55,5 @@ T002A仅客户端：Node24直接执行实际TypeScript核心，10测试通过；
 ## 20261009-type-gate-05
 T002BV-C固定组件4.1.7声明16文件精确兼容修补，正常Windows22测试通过、冻结重装自动应用16/再0、库存严格类型/脚本与库存ESLint及实际weapp构建通过。依赖版本/锁文件SHA不变，无运行JS变更、未关闭类型检查。默认沙箱rename夹具EPERM是独立环境限制，正常权限与后续远程结果各自记录。
 完整tsc诊断96→59仍exit2（37条已修），基线/最终完整日志与官方包来源、候选只读检查、local-summary.json见iterations/evidence/20261009-type-gate-05。上游候选未完整安装/构建，不因版本新就全项目升级。剩余request/cloud/API及可选跨框架/webpack分T002BV-A/X；T002BV/T002B/MVP未验收。远程待按实现SHA核对；真实微信交互/部署/提审未执行。
+
+本轮远程证据：实现b12845d79b04968c0578d45c2e4444d0db8c144e，运行37906980987 client/weapp与37906980854 H2/PG全部success，步骤见本轮remote-ci.json。C限定验收，不等于完整tsc（仍exit2/59条）或真实微信/部署通过。

@@ -15,7 +15,7 @@
     "diagnosticsIgnored": 0
   },
   "lockSha256": "13B95902F004940939BE24BA3F523E791FED9C4EAB1A86690BCB2EFB23D103F2",
-  "acceptance": "C local bounded scope passed; BV/B/MVP unaccepted until full gate and required evidence",
+  "acceptance": "T002BV-C limited scope accepted; T002BV/T002B/MVP unaccepted until full type gate and other required evidence",
   "frozenInstall": {
     "command": "Yarn1.22.22 install --frozen-lockfile --offline --force --non-interactive",
     "reapplied": 0,
@@ -26,7 +26,16 @@
     "scope": "inventory plus scripts/apply-type-patches.mjs and tests/type-patches.test.mjs",
     "exit": 0
   },
-  "remoteCI": "pending",
+  "remoteCI": {
+    "implementationSha": "b12845d79b04968c0578d45c2e4444d0db8c144e",
+    "scope": "client/patch tests, frozen install, patch idempotence, focused types/lint/weapp and backend H2/PG; full types still failed locally",
+    "conclusion": "success",
+    "status": "completed",
+    "runs": [
+      37906980987,
+      37906980854
+    ]
+  },
   "focusedTypes": {
     "command": "tsc --project tsconfig.inventory.json",
     "exit": 0,
