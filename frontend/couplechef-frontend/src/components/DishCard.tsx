@@ -1,5 +1,4 @@
 import { View, Text, Image } from '@tarojs/components'
-import React from 'react'
 import './DishCard.scss'
 
 interface Dish {

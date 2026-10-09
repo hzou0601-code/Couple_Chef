@@ -2,7 +2,6 @@ import { View, Text, Image, ScrollView } from '@tarojs/components'
 import { useEffect } from 'react'
 import { useMenuStore } from '../../store/menuStore'
 import './index.scss'
-import React from 'react'
 
 export default function Index() {
   const { dishes, fetchDishes } = useMenuStore()

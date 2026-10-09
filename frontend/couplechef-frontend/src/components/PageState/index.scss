@@ -1,0 +1,12 @@
+@use '../../styles/tokens' as t;
+
+.chef-state {
+  padding: t.$space-lg;
+  border: 1px solid t.$color-border;
+  border-radius: t.$radius;
+  background: t.$color-surface;
+  text-align: center;
+
+  &__title { display: block; color: t.$color-text; font-size: 32px; font-weight: 600; }
+  &__description { display: block; margin: t.$space-md 0; color: t.$color-muted; line-height: 1.6; }
+}

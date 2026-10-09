@@ -2,6 +2,7 @@
   "name": "couplechef-frontend",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "description": "",
   "templateInfo": {
     "name": "default",
@@ -11,6 +12,9 @@
   },
   "scripts": {
     "test:api": "node --test tests/storage-client.test.mjs",
+    "test:inventory": "node --test tests/storage-client.test.mjs tests/inventory-list.test.mjs",
+    "lint:inventory": "eslint src/pages/storage src/components/ActionButton src/components/PageState src/features/inventory/listState.ts",
+    "typecheck": "tsc --noEmit",
     "typecheck:api": "tsc --project tsconfig.inventory.json",
     "prepare": "husky",
     "new": "taro new",

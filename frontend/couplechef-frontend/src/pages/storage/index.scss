@@ -1,0 +1,24 @@
+@use '../../styles/tokens' as t;
+
+.inventory-page { min-height: 100vh; box-sizing: border-box; padding: t.$space-lg; background: t.$color-background; color: t.$color-text; font-size: t.$font-body; }
+.inventory-title { display: block; font-size: t.$font-title; font-weight: 600; color: t.$color-primary; }
+.inventory-subtitle { display: block; margin: t.$space-sm 0 t.$space-md; color: t.$color-muted; }
+.inventory-filters { margin-bottom: t.$space-md; }
+.inventory-search { display: flex; align-items: center; }
+.inventory-input { flex: 1; min-width: 0; height: 80px; padding: 0 t.$space-md; border: 1px solid t.$color-border; border-radius: t.$radius; background: t.$color-surface; }
+.inventory-selectors { margin: t.$space-md 0; }
+.inventory-select { padding: t.$space-md; margin-bottom: t.$space-sm; border: 1px solid t.$color-border; border-radius: t.$radius; background: t.$color-surface; }
+.inventory-actions { display: flex; }
+.inventory-hint { display: block; margin: t.$space-md 0; font-size: t.$font-small; color: t.$color-muted; line-height: 1.6; }
+.inventory-count { display: block; margin-bottom: t.$space-md; color: t.$color-muted; }
+.inventory-card {
+  margin-bottom: t.$space-md; padding: t.$space-md; border: 1px solid t.$color-border; border-radius: t.$radius; background: t.$color-surface;
+  &__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; }
+  &__name { font-size: 32px; font-weight: 600; overflow-wrap: anywhere; }
+  &__quantity { color: t.$color-primary; &--zero { color: t.$color-warning; } }
+  &__details { display: block; margin-top: t.$space-sm; color: t.$color-muted; overflow-wrap: anywhere; }
+}
+
+.inventory-search .chef-button { margin-left: t.$space-sm; }
+.inventory-actions .chef-button { margin-right: t.$space-sm; }
+.inventory-card__quantity { margin-left: t.$space-sm; }

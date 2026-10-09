@@ -1,0 +1,39 @@
+{
+  "remoteCI": "not yet run",
+  "weapp": {
+    "exit": 0,
+    "command": "TARO_APP_API_BASE_URL=https://api.example.com/api taro build --type weapp",
+    "result": "Compiled successfully in 1.39m",
+    "notes": "Example endpoint only; no deployment; browserslist/baseline age warnings retained",
+    "artifact": "frontend/couplechef-frontend/dist"
+  },
+  "frozenInstall": {
+    "exit": 0,
+    "lockSha256": "13B95902F004940939BE24BA3F523E791FED9C4EAB1A86690BCB2EFB23D103F2",
+    "command": "yarn install --frozen-lockfile --non-interactive --registry https://registry.npmjs.org --cache-folder .tools/yarn-cache",
+    "tool": "Yarn1.22.22",
+    "notes": "Initial registry.yarnpkg.com retries stopped; same frozen lock installed via official npm registry. Existing peer warnings and husky .git directory warning retained."
+  },
+  "base": "83f7863",
+  "actualWeChat": "not run; no CLI at standard path; native automation unavailable; AppID and legal domain pending",
+  "runId": "20261009-inventory-list-04",
+  "fullTypes": {
+    "exit": 2,
+    "command": "tsc --noEmit",
+    "result": "failed, remaining third-party Taro/webpack declarations; not waived"
+  },
+  "inventoryTypes": {
+    "scope": "strict inventory client, loader, page and reusable components; existing skipLibCheck only in focused config",
+    "exit": 0,
+    "command": "tsc --project tsconfig.inventory.json"
+  },
+  "tests": {
+    "passed": 16,
+    "command": "node --test tests/storage-client.test.mjs tests/inventory-list.test.mjs",
+    "failed": 0
+  },
+  "inventoryLint": {
+    "command": "eslint src/pages/storage src/components/ActionButton src/components/PageState src/features/inventory/listState.ts",
+    "exit": 0
+  }
+}

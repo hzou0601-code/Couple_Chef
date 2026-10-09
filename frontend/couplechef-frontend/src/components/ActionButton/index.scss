@@ -1,0 +1,15 @@
+@use '../../styles/tokens' as t;
+
+.chef-button {
+  margin: 0;
+  padding: 0 t.$space-md;
+  border-radius: t.$radius;
+  background: t.$color-primary;
+  color: t.$color-surface;
+  font-size: t.$font-body;
+  line-height: 80px;
+
+  &::after { border: 0; }
+  &--secondary { background: t.$color-soft; color: t.$color-primary; }
+  &[disabled] { background: t.$color-border; color: t.$color-muted; }
+}

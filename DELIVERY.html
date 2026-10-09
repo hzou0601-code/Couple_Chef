@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Couple Chef · MVP 交付</title>
-<style>body{font:16px/1.7 system-ui,sans-serif;max-width:1080px;margin:32px auto;padding:0 24px;background:#fff9fb;color:#302a2c}h1,h2{color:#873e59}table{border-collapse:collapse;width:100%;background:white}td,th{border:1px solid #eadce1;padding:8px;text-align:left}a{color:#873e59}.status{padding:16px;background:#ffe5ec;border-radius:12px}</style>
+<style>body{font:16px/1.7 system-ui,sans-serif;max-width:1080px;margin:32px auto;padding:0 24px;background:#fff9fb;color:#302a2c}h1,h2{color:#873e59}a{color:#873e59}.status{padding:16px;background:#ffe5ec;border-radius:12px}</style>
 <h1>Couple Chef · MVP 交付</h1>
-<p class="status">整体：进行中｜本轮阶段：交付完成，T002A已验收｜运行：20261009-inventory-client-03｜更新：2026-10-09（Australia/Sydney）</p>
-<h2>范围与平台</h2><p>冰箱库存 → 双模式晚餐推荐 → 确认完成做饭 → 幂等扣库存。统一小程序界面。现有项目为 Taro 4.1.7 / React 18 / TypeScript 与 Spring Boot 3.2 / Java 17 / Gradle。project.config.json 的 compileType=miniprogram，按微信小程序推进；真实 AppID 和测试环境待提供。无付费 AI。</p>
-<p>先读：<a href="docs/requirements.md">需求与验收</a> · <a href="docs/architecture.md">架构与决策</a> · <a href="docs/backlog.md">稳定任务待办</a> · <a href="docs/verification.md">验证与环境</a> · <a href="docs/api.md">库存API契约</a> · <a href="docs/review-agent.md">严格审查agent</a> · <a href="docs/iterations/20261009-inventory-client-03.md">本轮记录</a> · <a href="docs/iterations/20261008-postgres-ci-02.md">上一轮</a></p>
-<h2>MVP 验收</h2><ul><li>□ 库存新增/编辑/删除/查看、搜索/分类/临期、重复/不足/空库存处理。</li><li>□ 两种推荐模式、结构化菜谱、单位兼容、理由/用料/份量/步骤、缺料与购物清单、假设与不足解释。</li><li>□ 确认做饭后事务扣减、重复请求幂等、并发与库存不足测试。</li><li>□ 统一设计变量/组件；主要页面加载/空/错误/成功；微信运行交互验证。</li><li>□ 独立数据库与迁移、API契约/输入校验/统一错误、无密钥环境示例。</li><li>□ 格式/静态/类型、单元/集成/E2E、前后端构建、迁移恢复与远程CI证据。</li></ul>
-<h2>本轮任务</h2><p>T002A（P0）：库存小程序API客户端。故事：库存页面需要类型明确、可配置的真实API访问与错误处理。范围：Taro.request适配、CRUD/version、统一错误和客户端自动化；不修改页面。</p>
-<p>验收：无硬编码localhost、无写请求自动重试或假数据；列表/单条/新增/编辑/删除、400/404/409/网络/损坏响应测试通过，严格类型检查。<a href="docs/iterations/20261009-inventory-client-03.md">本轮计划与技能来源</a>。整项目微信构建/交互另验收。</p>
-<h2>已完成、进行中与下一步</h2><p>T001/T001V库存后端、真实PG/重启与后端CI已验收。T002拆分为A客户端、B列表与搜索、C写入表单、D微信交互验收。本轮T002A客户端10项测试及聚焦类型通过，独立审查无剩余缺陷；页面尚未修改。30分钟 heartbeat 已启用。</p>
-<p>唯一首选下一任务：T002B 库存只读列表/搜索与加载空错状态、设计变量/组件；按既有yarn锁安装依赖并执行微信构建，剩余环境限制准确记录。</p>
-<h2>本轮验证</h2><p>Node24实际客户端源码测试10/10通过；TypeScript5.9.3使用真实Taro4.1.7声明聚焦严格检查通过；actionlint及diff检查通过，独立严格审查无剩余可行动缺陷。实现提交2978692的<a href="https://github.com/hzou0601-code/Couple_Chef/actions/runs/37875308860">客户端远程CI</a>与<a href="https://github.com/hzou0601-code/Couple_Chef/actions/runs/37875308815">后端远程CI</a>均成功。<a href="docs/iterations/evidence/20261009-inventory-client-03/remote-ci.json">按SHA核对的工作/步骤证据</a>。完整前端构建和微信交互未执行。</p>
-<h2>限制与证据</h2><p>真实PG已通过；备份恢复尚未演练，Flyway支持提示待T006评估。前端整体依赖未安装、yarn锁未入库、微信完整构建/交互未执行；本轮聚焦类型使用真实Taro4.1.7声明与skipLibCheck，仅检查客户端，不代表全项目。旧菜单axios/available仍待后续任务；MVP未验收。</p>
-<p>关联实现提交：本轮<code>2978692</code>，上一轮e2d2345/592410c；分支codex/inventory-api已推送，未合并main。本轮后续证据文档提交另记。部署/平台审核：未运行；真实AppID/合法域名与访问边界待确认；默认仅本地监听。生产发布/正式提审：未授权。</p>
+<p class="status">整体：进行中｜本轮阶段：验证完成，交付及远程CI待核对｜运行：20261009-inventory-list-04｜更新：2026-10-09（Australia/Sydney）</p>
+<h2>范围与平台</h2><p>冰箱库存 → 双模式晚餐推荐 → 确认做饭 → 幂等扣库存。Taro4.1.7 / React18 / TypeScript 微信小程序，Spring Boot3.2 / Java17 / Gradle 后端，独立PostgreSQL16与Flyway迁移。保留单仓库；前端仅通过API访问后端，无付费AI。默认后端仅本地监听；共享访问边界列T008。</p>
+<p>先读：<a href="docs/requirements.md">需求与验收</a> · <a href="docs/architecture.md">架构与决策</a> · <a href="docs/backlog.md">稳定任务/优先级/依赖/验收条件</a> · <a href="docs/verification.md">验证与环境</a> · <a href="docs/api.md">库存API契约</a> · <a href="docs/review-agent.md">严格审查agent</a> · <a href="docs/iterations/20261009-inventory-list-04.md">本轮记录</a> · <a href="docs/iterations/20261009-inventory-client-03.md">上轮</a></p>
+<h2>MVP 验收</h2><ul><li>□ 库存CRUD、搜索/分类/临期、重复/不足/空库存。</li><li>□ 双模式推荐、兼容单位、理由/用料/份量/步骤、调味料假设、缺料购物清单和不足解释。</li><li>□ 用户确认后事务/并发/幂等扣库存。</li><li>□ 统一设计变量/组件、主要页面加载空错成功、真实微信交互与布局。</li><li>□ 独立数据库/迁移、API校验与错误、无密钥配置及访问边界。</li><li>□ 完整格式/静态/类型、单元/集成/E2E、前后端构建、数据库恢复与远程CI门禁。</li></ul>
+<h2>本轮任务</h2><p>T002B（P0）：只读库存列表/搜索、分类和临期组合筛选、复用按钮/状态与Sass变量。验收包括真实字段/零数量、加载空错、清空/重试、最新请求胜出及隐藏失效、冻结锁安装和类型/静态/微信构建。实现完成；全项目类型失败，保持未验收。</p>
+<h2>已完成、进行中与下一步</h2><p>T001/T001V后端与真实PG验证、T002A客户端已验收。T002B代码和部分验证完成；新增T002BV承接完整类型门禁修复。T002C表单、T002D微信交互、推荐/确认做饭及完整质量门禁待办。每30分钟heartbeat已启用，运行锁防止重叠。</p>
+<p>唯一首选下一任务：T002BV（依赖T002B实现）修复并验证全项目类型门禁，核对Taro/webpack声明兼容方案和锁文件，保留现有检查；复跑库存测试、类型/静态和微信构建后再验收T002B。</p>
+<h2>本轮验证</h2><p>16项实际客户端/列表状态测试通过；库存范围严格类型与ESLint通过；Yarn1.22.22冻结原锁安装成功，锁文件入库未更换依赖版本；Taro微信生产构建成功，生成中文页面配置与rpx样式；actionlint及diff检查通过。完整<code>tsc --noEmit</code>失败，剩余Taro/webpack第三方声明问题保留；未关闭检查。<a href="docs/iterations/evidence/20261009-inventory-list-04/local-summary.json">本地结果与命令</a>。新增远程冻结安装/库存检查/微信构建job，结果待按实现SHA核对。</p>
+<h2>限制、决策与交付</h2><p>不以局部类型或编译产物替代全项目门禁/真实交互。当前未找到标准路径微信CLI、原生自动化不可用，真实AppID/合法request域名与测试环境待配置；实际点击/视觉、部署/平台审核未执行。原菜单localhost/available仍待后续范围，数据库备份恢复及Flyway维护提示列T006；MVP未验收。</p>
+<p>本轮实现提交：待记录；分支codex/inventory-api，未合并main。<a href="docs/iterations/20261009-inventory-list-04.md">变更、独立审查、提交与恢复检查点</a>。生产发布与正式提审未授权。</p>
 </html>

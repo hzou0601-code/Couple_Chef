@@ -29,6 +29,7 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 yarn.lock
+!/frontend/couplechef-frontend/yarn.lock
 pnpm-lock.yaml
 taro_output/
 .taro/

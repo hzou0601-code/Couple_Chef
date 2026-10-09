@@ -1,0 +1,3 @@
+@use './styles/tokens' as t;
+
+page { font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: t.$font-body; line-height: 1.5; color: t.$color-text; background: t.$color-background; }

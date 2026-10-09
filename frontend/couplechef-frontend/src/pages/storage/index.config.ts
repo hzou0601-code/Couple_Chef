@@ -1,4 +1,1 @@
-export default definePageConfig({
-    navigationBarTitleText: 'Storage',
-    enablePullDownRefresh: false,
-});
+export default definePageConfig({ navigationBarTitleText: '我的冰箱' })
