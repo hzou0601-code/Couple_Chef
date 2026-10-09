@@ -1,5 +1,14 @@
 {
-  "remoteCI": "not yet run",
+  "remoteCI": {
+    "runs": [
+      37890026149,
+      37890026203
+    ],
+    "implementationSha": "2310ea746ad41d3fe62ca9d47c780fd64c92b73a",
+    "status": "completed",
+    "conclusion": "success",
+    "scope": "client tests, frozen install, focused inventory types/lint, weapp build; backend H2/PG jobs. Full project types NOT passed."
+  },
   "weapp": {
     "exit": 0,
     "command": "TARO_APP_API_BASE_URL=https://api.example.com/api taro build --type weapp",

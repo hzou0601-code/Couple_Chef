@@ -49,3 +49,5 @@ T002A仅客户端：Node24直接执行实际TypeScript核心，10测试通过；
 ## 20261009-inventory-list-04
 真实Node24客户端/列表状态16测试通过；锁定Yarn1.22.22冻结原yarn.lock安装通过；库存范围strict types（沿用聚焦skipLibCheck）及现有ESLint通过；Taro4.1.7实际weapp生产构建exit0，中文页面配置/rpx产物已核对。证据iterations/evidence/20261009-inventory-list-04/local-summary.json、tests.txt与weapp-build-tail.txt。
 完整tsc --noEmit仍exit2，剩余Taro/webpack第三方声明错误，完整日志full-types-failed.txt。未禁用/忽略该检查，T002B保持未验收，唯一下一任务T002BV修复完整类型门禁。真实微信点击/视觉另T002D；标准CLI路径未找到且原生自动化不可用。新增远程冻结安装/库存检查/微信构建job待按SHA核对；未部署/提审。启动构建需显式TARO_APP_API_BASE_URL，示例地址不能用作真实网络验证。
+
+本轮远程：实现SHA2310ea746ad41d3fe62ca9d47c780fd64c92b73a，运行37890026149的client/weapp与37890026203的H2/PG均completed/success。证据iterations/evidence/20261009-inventory-list-04/remote-ci.json；完整tsc仍本地失败，远程没有此门禁，不能以CI绿色替代。
