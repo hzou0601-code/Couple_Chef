@@ -1,0 +1,43 @@
+{
+  "base": "160a0b7",
+  "runtimeJavaScriptChanged": false,
+  "weapp": {
+    "command": "TARO_APP_API_BASE_URL=https://api.example.com/api taro build --type weapp",
+    "exit": 0
+  },
+  "runId": "20261009-type-gate-05",
+  "patchFiles": 16,
+  "fullTypes": {
+    "baselineDiagnostics": 96,
+    "command": "tsc --noEmit",
+    "exit": 2,
+    "remainingDiagnostics": 59,
+    "diagnosticsIgnored": 0
+  },
+  "lockSha256": "13B95902F004940939BE24BA3F523E791FED9C4EAB1A86690BCB2EFB23D103F2",
+  "acceptance": "C local bounded scope passed; BV/B/MVP unaccepted until full gate and required evidence",
+  "frozenInstall": {
+    "command": "Yarn1.22.22 install --frozen-lockfile --offline --force --non-interactive",
+    "reapplied": 0,
+    "exit": 0,
+    "applied": 16
+  },
+  "eslint": {
+    "scope": "inventory plus scripts/apply-type-patches.mjs and tests/type-patches.test.mjs",
+    "exit": 0
+  },
+  "remoteCI": "pending",
+  "focusedTypes": {
+    "command": "tsc --project tsconfig.inventory.json",
+    "exit": 0,
+    "existingSkipLibCheck": true
+  },
+  "tests": {
+    "failed": 0,
+    "command": "node --test tests/type-patches.test.mjs tests/storage-client.test.mjs tests/inventory-list.test.mjs",
+    "environment": "normal Windows permissions, isolated temp fixtures; default sandbox rename EPERM recorded separately",
+    "passed": 22
+  },
+  "dependencyVersionsChanged": false,
+  "scope": "T002BV-C component declarations only"
+}

@@ -1,0 +1,17 @@
+{
+  "baseline": {
+    "@tarojs/components": 40,
+    "@tarojs/runtime": 1,
+    "@tarojs/taro": 34,
+    "webpack-chain": 20,
+    "webpack": 1
+  },
+  "afterComponentPatches": {
+    "@tarojs/components": 3,
+    "@tarojs/runtime": 1,
+    "@tarojs/taro": 34,
+    "webpack-chain": 20,
+    "webpack": 1
+  },
+  "completeGate": "failed; no diagnostic ignored"
+}

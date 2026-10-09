@@ -1,0 +1,193 @@
+{
+  "package": "@tarojs/components",
+  "version": "4.1.7",
+  "source": "https://registry.npmjs.org/@tarojs/components/-/components-4.1.7.tgz",
+  "license": "MIT",
+  "reason": "Correct missing event imports, ambient namespace declarations and identical duplicated Textarea property. No JavaScript or event payload weakening.",
+  "files": [
+    {
+      "path": "types/AnimationVideo.d.ts",
+      "beforeSha256": "5c4e37333ebd54cf4c3e04a23b3089e5f968cb96e989bd08c5e2120a045f0782",
+      "afterSha256": "ed9a58da7fe92159c776b6ce2b588397822d448262afdd3a55e5e00b724d034a",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/AnimationView.d.ts",
+      "beforeSha256": "f30c5ccdd345b1680cf90e2b80f54d926af1276b4b81e057204058d496b0b6e4",
+      "afterSha256": "95b567887fdc961ab1af74ae87166441c2f67c48fcbeebc0115cda85d3c0328a",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/ArCamera.d.ts",
+      "beforeSha256": "3ac37cc6f44efc24ad4029b105aa5cca93c9b625db782e6b88c527768c0dd62b",
+      "afterSha256": "a3e0532b0bf64f545ad7632e9955c6f6c3656f0b0dd7d659f96bd02ee3fd643d",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/AwemeData.d.ts",
+      "beforeSha256": "1049b6ea937da49ccd3d3f32cb6fab63825f8196776fc797f778f7d7f753f9f5",
+      "afterSha256": "bd8a164dbfd668fbcc7f4a41364d5922030c2d961aadd3050974bb89ed75c073",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/CommentDetail.d.ts",
+      "beforeSha256": "9d18316e990862a7799576a8b8a6ea3daf2108846da53616cd2789e9c257af64",
+      "afterSha256": "fa22479da5f74a2e949b70a4e9adbcdef52cd3d00780a9d07980275aa55b4f7b",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        },
+        {
+          "before": "namespace CommentDetailProps {",
+          "after": "declare namespace CommentDetailProps {"
+        }
+      ]
+    },
+    {
+      "path": "types/CommentList.d.ts",
+      "beforeSha256": "9807019abd3f73d2d373f8c9bc1e2e925963703ff3e9d867f50cbd2657cecdad",
+      "afterSha256": "f21728256069b3b585055d1f0c1a4448198c1b577216aa83de24a001e6dc37c1",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        },
+        {
+          "before": "namespace CommentListProps {",
+          "after": "declare namespace CommentListProps {"
+        }
+      ]
+    },
+    {
+      "path": "types/FollowSwan.d.ts",
+      "beforeSha256": "bc8200050b96b60464546be39948ee493a2429e903d07f262e2baf4181d56943",
+      "afterSha256": "178a948574eed15d7e9d16a85873c01e4eb63f605c3b9e413c855d536be20e4a",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/InlinePaymentPanel.d.ts",
+      "beforeSha256": "a30e3592d0bbc875b8d86a6f17ba60dedb5ca31999c2fa9dc027ef77beb51456",
+      "afterSha256": "e6fb45f1fc6d7b05cf9f4ff79d945e4181461764268b1b19976d01f22fc7cec0",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Lifestyle.d.ts",
+      "beforeSha256": "6d94f5f3cd9645488b98aba7255918865ae26b1c8717fdb4bbed8f9bf5bb4f4c",
+      "afterSha256": "b0e2fd47ec116d47f757b0c2247ec56f5deff524ba38e13c5e3c76ac630e7e4c",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Like.d.ts",
+      "beforeSha256": "fb73efaf1ea2f8938464f20a755ad4e843f5a3c4214e42083be4f0a15273fcae",
+      "afterSha256": "aed6a4933c07a3ecd2a9755c2a78908715bf39c8ef28acd7ab78f226d1cd7082",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Login.d.ts",
+      "beforeSha256": "953c55f4c1e159f6a1627578825957ca18e9bc0a55215287545469190a62059d",
+      "afterSha256": "38ed2af90f555478d33669f8448bd7b6deabc45467344c993aaf23a37b87331b",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Lottie.d.ts",
+      "beforeSha256": "c9b9936166719b39345967d8f5c359506052aed47c5682a6dde50af275e021c2",
+      "afterSha256": "d2d9dafa5f1cbb243bcd5a584df1b20646acd3af3359a916d154a99bb369017c",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/RtcRoom.d.ts",
+      "beforeSha256": "de0e47d63a914822e09d77380165d2190ad18e5bc9883236e4610a990902f2fb",
+      "afterSha256": "a78cfe1e514fdc0f026bc43324da374730079f024e37f49676c59efbd0987a15",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/StickyHeader.d.ts",
+      "beforeSha256": "bdcb085e1145855f59e0dd649ccaef8f55fd82eda87c4ba729711fe43b796e6c",
+      "afterSha256": "736ea7f1edacc00280b210a6bb247c591d2fad762d3349552ee6ff6e5ae49330",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Tabs.d.ts",
+      "beforeSha256": "259c2f5ffc3f063ff7b076ded14ccd54b5b7cfb4337f02808816705cb2538273",
+      "afterSha256": "f9f41bad5f63b2fd36e5ec58873179f9a5673e15a7290e0d42cf209ccb3020d2",
+      "edits": [
+        {
+          "before": "import { StandardProps } from './common'",
+          "after": "import { StandardProps, CommonEventFunction } from './common'"
+        }
+      ]
+    },
+    {
+      "path": "types/Textarea.d.ts",
+      "beforeSha256": "64ffaa90a4a6b66d758b1c02626b32c78a49f461a1312b6438730af52f03f41a",
+      "afterSha256": "f91493687a9eb55eb9fef7b7420149b16c5e99adb214744792330c11c5c5d96e",
+      "edits": [
+        {
+          "before": "  /** 需传入对象，格式为 { fontSize: number, fontWeight: string, color: string }\n   * @supported weapp\n   */\n  placeholderStyle?: string\n",
+          "after": ""
+        }
+      ]
+    }
+  ]
+}

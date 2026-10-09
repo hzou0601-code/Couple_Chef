@@ -1,0 +1,46 @@
+[
+  {
+    "version": "4.1.11",
+    "scope": "Read-only official package declaration inspection, not a candidate install/build",
+    "defectsStillPresent": [
+      "types/AnimationVideo.d.ts",
+      "types/AnimationView.d.ts",
+      "types/ArCamera.d.ts",
+      "types/AwemeData.d.ts",
+      "types/CommentDetail.d.ts",
+      "types/CommentList.d.ts",
+      "types/FollowSwan.d.ts",
+      "types/InlinePaymentPanel.d.ts",
+      "types/Lifestyle.d.ts",
+      "types/Like.d.ts",
+      "types/Login.d.ts",
+      "types/Lottie.d.ts",
+      "types/RtcRoom.d.ts",
+      "types/StickyHeader.d.ts",
+      "types/Tabs.d.ts",
+      "types/Textarea.d.ts"
+    ]
+  },
+  {
+    "version": "4.3.0",
+    "scope": "Read-only official package declaration inspection, not a candidate install/build",
+    "defectsStillPresent": [
+      "types/AnimationVideo.d.ts",
+      "types/AnimationView.d.ts",
+      "types/ArCamera.d.ts",
+      "types/AwemeData.d.ts",
+      "types/CommentDetail.d.ts",
+      "types/CommentList.d.ts",
+      "types/FollowSwan.d.ts",
+      "types/InlinePaymentPanel.d.ts",
+      "types/Lifestyle.d.ts",
+      "types/Like.d.ts",
+      "types/Login.d.ts",
+      "types/Lottie.d.ts",
+      "types/RtcRoom.d.ts",
+      "types/StickyHeader.d.ts",
+      "types/Tabs.d.ts",
+      "types/Textarea.d.ts"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+yarn install v1.22.22
+[1/4] Resolving packages...
+(node:18412) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+warning " > @tarojs/plugin-platform-alipay@4.1.7" has unmet peer dependency "@tarojs/service@4.1.7".
+warning "@tarojs/plugin-platform-h5 > @tarojs/components-react@4.1.7" has unmet peer dependency "solid-js@*".
+warning " > @tarojs/plugin-platform-jd@4.1.7" has unmet peer dependency "@tarojs/service@4.1.7".
+warning " > @tarojs/plugin-platform-weapp@4.1.7" has unmet peer dependency "@tarojs/service@4.1.7".
+warning " > @tarojs/plugin-platform-swan@4.1.7" has unmet peer dependency "@tarojs/service@4.1.7".
+warning " > @tarojs/plugin-platform-tt@4.1.7" has unmet peer dependency "@tarojs/service@4.1.7".
+warning "@tarojs/webpack5-runner > less-loader@12.3.0" has unmet peer dependency "less@^3.5.0 || ^4.0.0".
+warning "@tarojs/webpack5-runner > stylus-loader@8.1.2" has unmet peer dependency "stylus@>=0.52.4".
+[4/4] Rebuilding all packages...
+$ node scripts/apply-type-patches.mjs
+Applied 16 declaration patches (others already applied)
+$ husky
+.git can't be foundDone in 16.57s.

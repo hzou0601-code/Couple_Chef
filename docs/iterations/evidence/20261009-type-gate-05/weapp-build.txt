@@ -1,0 +1,4 @@
+  D:\Couple_Chef\.tools\type-gate-05\weapp-build.log:225:√ Webpack
+> D:\Couple_Chef\.tools\type-gate-05\weapp-build.log:226:  Compiled successfully in 7.20s
+  D:\Couple_Chef\.tools\type-gate-05\weapp-build.log:227:
+  D:\Couple_Chef\.tools\type-gate-05\weapp-build.log:228:Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:

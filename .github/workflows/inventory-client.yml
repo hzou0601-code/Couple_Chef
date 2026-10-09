@@ -22,7 +22,7 @@ jobs:
           node-version: '24'
       - name: Test actual inventory client TypeScript with Node built-ins
         working-directory: frontend/couplechef-frontend
-        run: node --test tests/storage-client.test.mjs tests/inventory-list.test.mjs
+        run: node --test tests/storage-client.test.mjs tests/inventory-list.test.mjs tests/type-patches.test.mjs
 
   weapp:
     runs-on: ubuntu-latest
@@ -41,10 +41,13 @@ jobs:
         run: npm install --global yarn@1.22.22
       - name: Install exact frontend dependencies
         run: yarn install --frozen-lockfile --non-interactive
+      - name: Verify pinned declaration patches remain valid and idempotent
+        run: node scripts/apply-type-patches.mjs
       - name: Strict inventory types and existing ESLint rules
         run: |
           yarn typecheck:api
           yarn lint:inventory
+          yarn lint:type-patches
       - name: Build WeChat mini-program (example endpoint, no deployment)
         env:
           TARO_APP_API_BASE_URL: https://api.example.com/api

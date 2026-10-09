@@ -51,3 +51,7 @@ T002A仅客户端：Node24直接执行实际TypeScript核心，10测试通过；
 完整tsc --noEmit仍exit2，剩余Taro/webpack第三方声明错误，完整日志full-types-failed.txt。未禁用/忽略该检查，T002B保持未验收，唯一下一任务T002BV修复完整类型门禁。真实微信点击/视觉另T002D；标准CLI路径未找到且原生自动化不可用。新增远程冻结安装/库存检查/微信构建job待按SHA核对；未部署/提审。启动构建需显式TARO_APP_API_BASE_URL，示例地址不能用作真实网络验证。
 
 本轮远程：实现SHA2310ea746ad41d3fe62ca9d47c780fd64c92b73a，运行37890026149的client/weapp与37890026203的H2/PG均completed/success。证据iterations/evidence/20261009-inventory-list-04/remote-ci.json；完整tsc仍本地失败，远程没有此门禁，不能以CI绿色替代。
+
+## 20261009-type-gate-05
+T002BV-C固定组件4.1.7声明16文件精确兼容修补，正常Windows22测试通过、冻结重装自动应用16/再0、库存严格类型/脚本与库存ESLint及实际weapp构建通过。依赖版本/锁文件SHA不变，无运行JS变更、未关闭类型检查。默认沙箱rename夹具EPERM是独立环境限制，正常权限与后续远程结果各自记录。
+完整tsc诊断96→59仍exit2（37条已修），基线/最终完整日志与官方包来源、候选只读检查、local-summary.json见iterations/evidence/20261009-type-gate-05。上游候选未完整安装/构建，不因版本新就全项目升级。剩余request/cloud/API及可选跨框架/webpack分T002BV-A/X；T002BV/T002B/MVP未验收。远程待按实现SHA核对；真实微信交互/部署/提审未执行。

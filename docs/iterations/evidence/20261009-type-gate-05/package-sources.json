@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://registry.npmjs.org/@tarojs/taro/-/taro-4.1.11.tgz",
+    "package": "@tarojs/taro",
+    "integrity": "sha512-kaFWiGfyxxqX4nl2Gg+FmMcJfOswT6M3QhikXxxtl3SEB171ThfVkYK9EVxDZ1imtd0DYR1gphZXjdaO58vTgQ==",
+    "version": "4.1.11"
+  },
+  {
+    "source": "https://registry.npmjs.org/@tarojs/components/-/components-4.1.11.tgz",
+    "package": "@tarojs/components",
+    "integrity": "sha512-BDmZFyTDvs0/DPYgFsS90aUCJscSrqyuGQqesqxmS8oMz1BREV7ZX/ZBbyncMEkgSOHyelyJtC/cedrQSzMhsw==",
+    "version": "4.1.11"
+  },
+  {
+    "source": "https://registry.npmjs.org/@tarojs/taro/-/taro-4.3.0.tgz",
+    "package": "@tarojs/taro",
+    "integrity": "sha512-iTSiRvqt0EDD3n4AMpF8RyeiHEME4MWrqFFXhBOSckGg9I3T4BCxQZQmsfEAKbZzgu2yw3Wg2Ahtt5X08w4Dtw==",
+    "version": "4.3.0"
+  },
+  {
+    "source": "https://registry.npmjs.org/@tarojs/components/-/components-4.3.0.tgz",
+    "package": "@tarojs/components",
+    "integrity": "sha512-awON8bTNFqB0AP6i2p4fokzRjfXUfO14R+l0ReipICPFS8ugjYnGcmhzpi2GaGgOXndC8h2f4mYCSsMVs5fohQ==",
+    "version": "4.3.0"
+  },
+  {
+    "package": "@tarojs/components",
+    "integrity": "sha512-fxdC/baHiUL17/E9dx/x51y2Z3FvTigt+4GBL+Loajv+4rUwp+eABJN0t1T0bCSgM/omEC5/+XJ7cxsHxoq/9A==",
+    "source": "https://registry.npmjs.org/@tarojs/components/-/components-4.1.7.tgz",
+    "version": "4.1.7"
+  }
+]
