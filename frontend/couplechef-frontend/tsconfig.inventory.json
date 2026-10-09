@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "strict": true, "noEmit": true, "skipLibCheck": true, "types": [] },
+  "include": [],
+  "files": ["src/api/storageClient.ts", "src/api/storage.ts", "types/global.d.ts"]
+}

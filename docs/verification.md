@@ -36,3 +36,8 @@ Java17已下载到项目忽略目录.tools/jdk17/jdk-17.0.20.1+1，官方Adoptiu
 连接真实测试库：设置TEST_DB_URL=jdbc:postgresql://127.0.0.1:15432/couplechef_test、TEST_DB_USER和TEST_DB_PASSWORD后执行backend/gradlew.bat test bootJar --no-daemon --console=plain。仅限独立测试数据库，接口测试会清理表；不要指向现有家庭库存库。不设置TEST_DB_*时使用H2。外部DB测试禁用缓存与UP-TO-DATE；切换环境会重跑测试。更新依赖时显式--write-locks并审查锁差异，常规验证/CI禁止自动改锁。
 
 现有PostgreSQL安装可用于本地测试，不需要启动Docker。Compose与CI使用PostgreSQL16，Flyway上游支持版本提示保留在日志，T006评估依赖维护；不把警告当失败，也不声称上游已支持该版本。数据库备份恢复、完整CI门禁、微信和部署仍未验收。
+
+## 20261009-inventory-client-03
+T002A仅客户端：Node24直接执行实际TypeScript核心，10测试通过；TypeScript5.9.3严格检查核心与Taro.request封装、global.d.ts通过，声明来自已核对yarn.lock SHA512的真实Taro4.1.7包；使用skipLibCheck，不检查完整依赖声明或整个工程/config。完整安装后可用`yarn typecheck:api`复现聚焦检查。本轮实际命令与临时真实包映射配置见iterations/20261009-inventory-client-03.md，日志在对应evidence目录。
+
+客户端测试无额外依赖：Node24运行`node --test tests/storage-client.test.mjs`；存在模块类型推断提示，未关闭检查或改工程模块体系掩盖。新增Inventory client tests工作流同命令，远程结果须按实现SHA记录。actionlint通过。全项目类型、前端构建、真机请求/页面交互未执行；原后端证据不混作本轮前端验证。

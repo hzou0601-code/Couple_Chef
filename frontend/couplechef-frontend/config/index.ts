@@ -21,6 +21,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       "@tarojs/plugin-generator"
     ],
     defineConstants: {
+      INVENTORY_API_BASE_URL: JSON.stringify(process.env.TARO_APP_API_BASE_URL || ''),
     },
     copy: {
       patterns: [

@@ -20,3 +20,10 @@
 重复边界：NFKC规范化名称、不区分大小写和首尾空白；单位相同；位置NFKC/小写/去首尾空白；同到期日（含无日期）；不同分类不绕过重复。不自动比较/合并g与kg，后续推荐按维度换算。
 
 400 VALIDATION_ERROR；404 NOT_FOUND；409 INVENTORY_CONFLICT或STALE_VERSION。冲突均不得部分修改或新增；界面应刷新列表并提示用户编辑已有记录。
+
+## 小程序客户端（T002A）
+src/api/storage.ts使用Taro.request，返回已拆出的data（不再返回Axios response）；目前无旧库存调用方，因此未改菜单API。InventoryApiError携带code/status/message；HTTP错误保留后端稳定code，网络/超时统一NETWORK_ERROR，损坏响应PROTOCOL_ERROR，缺失/非法构建配置CONFIG_ERROR。方法始终返回Promise，错误以rejection传递，由页面显示，不自动toast或重试写请求。
+
+构建shell设置TARO_APP_API_BASE_URL为含/api的HTTP(S)根地址，config/index.ts编译为INVENTORY_API_BASE_URL。前端.env.example只是示例，必须自行设置环境变量，不保证自动加载。支持DNS（国际域名用ASCII形式）或IPv4与有效端口；当前不支持IPv6字面地址，不使用浏览器URL/URLSearchParams。真机需HTTPS合法request域名；localhost只适用于本机开发，本客户端无默认localhost。
+
+Node24下执行`node --test tests/storage-client.test.mjs`，直接测试实际纯TypeScript客户端，无新增运行依赖。依赖按现有yarn锁安装后可用`yarn typecheck:api`聚焦检查；全项目类型/构建/微信交互仍列T002B/D，局部类型通过不能替代其证据。

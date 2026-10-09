@@ -1,5 +1,7 @@
 /// <reference types="@tarojs/taro" />
 
+declare const INVENTORY_API_BASE_URL: string
+
 declare module '*.png';
 declare module '*.gif';
 declare module '*.jpg';
