@@ -2,5 +2,5 @@
   "extends": "./tsconfig.json",
   "compilerOptions": { "strict": true, "noEmit": true, "skipLibCheck": true, "types": [] },
   "include": [],
-  "files": ["src/api/storageClient.ts", "src/api/storage.ts", "src/features/inventory/listState.ts", "src/pages/storage/index.tsx", "src/components/ActionButton/index.tsx", "src/components/PageState/index.tsx", "types/global.d.ts"]
+  "files": ["src/api/storageClient.ts", "src/api/storage.ts", "src/features/inventory/listState.ts", "src/pages/storage/index.tsx", "src/components/ActionButton/index.tsx", "src/components/PageState/index.tsx", "types/global.d.ts", "types/taro-request-params.d.ts"]
 }

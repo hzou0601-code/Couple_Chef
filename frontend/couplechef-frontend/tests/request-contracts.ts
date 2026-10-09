@@ -55,3 +55,34 @@ const invalidHousehold: number = application.household.name
 Taro.getApp<number>()
 void householdName
 void invalidHousehold
+
+Taro.addInterceptor(chain => {
+  const url: string | undefined = chain.requestParams.url
+  const timeout: number | undefined = chain.requestParams.timeout
+  // @ts-expect-error request body is unknown until validated
+  chain.requestParams.data.quantity
+  // @ts-expect-error timeout retains the actual numeric option type
+  chain.requestParams.timeout = 'slow'
+  // @ts-expect-error invalid HTTP method cannot be silently forwarded
+  chain.requestParams.method = 'INVALID'
+  // @ts-expect-error success callback response data is unknown until validated
+  chain.requestParams.success = result => { const quantity: number = result.data.quantity; void quantity }
+  void url
+  void timeout
+  return chain.proceed({ ...chain.requestParams, timeout: 5000 })
+})
+declare const interceptorChain: Taro.Chain
+interceptorChain.proceed({})
+interceptorChain.proceed({ url: '/api/storage', method: 'POST', data: { quantity: 500 } })
+// @ts-expect-error URL is a string even in an incomplete chain
+interceptorChain.proceed({ url: 123 })
+// @ts-expect-error callbacks are typed functions
+interceptorChain.proceed({ success: 'ok' })
+
+const typedInterceptorOptions: Taro.request.Option<{ success: boolean }> = {
+  url: '/api/storage',
+  success: result => { const success: boolean = result.data.success; void success },
+}
+interceptorChain.proceed(typedInterceptorOptions)
+// @ts-expect-error explicit response type keeps callback payload validation
+interceptorChain.proceed<{ success: boolean }>({ url: '/api/storage', success: result => { const invalid: number = result.data.success; void invalid } })

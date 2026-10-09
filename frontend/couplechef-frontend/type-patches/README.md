@@ -21,3 +21,7 @@ yarn typecheck:request-contracts checks actual public types, valid object/string
 ## Basic API declarations (T002BV-A2a)
 
 taro-basic-api-4.1.7.json repairs the official locked package's SMS CallbackResul typo using the existing CallbackResult and propagates getApp.Instance's App constraint to getApp. Original files match the archived official 4.1.7 package; version/before/after-SHA and exact path guards apply. Public contract tests check typed SMS results, string phone numbers and typed app fields, and reject numeric app instances. No runtime JS or dependency changes. Other API declarations and the full type gate remain pending.
+
+## Missing interceptor RequestParams (T002BV-A2b)
+
+The local types/taro-request-params.d.ts augmentation fills the missing symbol without another vendor-file transition. It follows locked @tarojs/api 4.1.7 interceptor source: initial options may be empty and data is unknown. Partial request.Option<T> preserves concrete public fields and callbacks; only data is overridden to unknown, requiring validation. Generic Chain.proceed forwards explicitly typed response callbacks while the default chain continues to read unknown data; its return type retains the original interceptor contract. Both scoped contract/inventory projects explicitly load the augmentation; the full project already includes types. Upgrades must re-evaluate or remove this augmentation if upstream adds the symbol. Runtime JS and request signatures are unchanged.

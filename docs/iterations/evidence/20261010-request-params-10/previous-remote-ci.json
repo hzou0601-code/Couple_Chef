@@ -1,0 +1,336 @@
+[
+  {
+    "id": 37966826751,
+    "url": "https://github.com/hzou0601-code/Couple_Chef/actions/runs/37966826751",
+    "jobs": [
+      {
+        "name": "client",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-09T17:31:05Z",
+            "completed_at": "2026-10-09T17:31:05Z"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-09T17:31:05Z",
+            "completed_at": "2026-10-09T17:31:07Z"
+          },
+          {
+            "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-09T17:31:07Z",
+            "completed_at": "2026-10-09T17:31:10Z"
+          },
+          {
+            "name": "Test actual inventory client TypeScript with Node built-ins",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-09T17:31:10Z",
+            "completed_at": "2026-10-09T17:31:10Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-09T17:31:10Z",
+            "completed_at": "2026-10-09T17:31:11Z"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-09T17:31:11Z",
+            "completed_at": "2026-10-09T17:31:11Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-09T17:31:11Z",
+            "completed_at": "2026-10-09T17:31:11Z"
+          }
+        ]
+      },
+      {
+        "name": "weapp",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-09T17:31:04Z",
+            "completed_at": "2026-10-09T17:31:05Z"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-09T17:31:05Z",
+            "completed_at": "2026-10-09T17:31:06Z"
+          },
+          {
+            "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-09T17:31:06Z",
+            "completed_at": "2026-10-09T17:31:08Z"
+          },
+          {
+            "name": "Install pinned Yarn tool",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-09T17:31:08Z",
+            "completed_at": "2026-10-09T17:31:10Z"
+          },
+          {
+            "name": "Install exact frontend dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-09T17:31:10Z",
+            "completed_at": "2026-10-09T17:31:54Z"
+          },
+          {
+            "name": "Verify pinned declaration patches remain valid and idempotent",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-09T17:31:54Z",
+            "completed_at": "2026-10-09T17:31:54Z"
+          },
+          {
+            "name": "Strict inventory types and existing ESLint rules",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-09T17:31:54Z",
+            "completed_at": "2026-10-09T17:32:00Z"
+          },
+          {
+            "name": "Build WeChat mini-program (example endpoint, no deployment)",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-09T17:32:00Z",
+            "completed_at": "2026-10-09T17:32:06Z"
+          },
+          {
+            "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-09T17:32:06Z",
+            "completed_at": "2026-10-09T17:32:06Z"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16,
+            "started_at": "2026-10-09T17:32:06Z",
+            "completed_at": "2026-10-09T17:32:06Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17,
+            "started_at": "2026-10-09T17:32:06Z",
+            "completed_at": "2026-10-09T17:32:06Z"
+          }
+        ]
+      }
+    ],
+    "conclusion": "success",
+    "sha": "dd7da8370b040ac4ee8721e147ef2f88db082456",
+    "status": "completed"
+  },
+  {
+    "id": 37966826755,
+    "url": "https://github.com/hzou0601-code/Couple_Chef/actions/runs/37966826755",
+    "jobs": [
+      {
+        "name": "H2 tests and backend build",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-09T17:31:05Z",
+            "completed_at": "2026-10-09T17:31:06Z"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-09T17:31:06Z",
+            "completed_at": "2026-10-09T17:31:08Z"
+          },
+          {
+            "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-09T17:31:08Z",
+            "completed_at": "2026-10-09T17:31:08Z"
+          },
+          {
+            "name": "Test and build with strict dependency locks",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-09T17:31:08Z",
+            "completed_at": "2026-10-09T17:31:57Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-09T17:31:57Z",
+            "completed_at": "2026-10-09T17:32:00Z"
+          },
+          {
+            "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-09T17:32:00Z",
+            "completed_at": "2026-10-09T17:32:00Z"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-09T17:32:00Z",
+            "completed_at": "2026-10-09T17:32:01Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-09T17:32:01Z",
+            "completed_at": "2026-10-09T17:32:01Z"
+          }
+        ]
+      },
+      {
+        "name": "PostgreSQL 16 integration and persistence",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-09T17:31:04Z",
+            "completed_at": "2026-10-09T17:31:06Z"
+          },
+          {
+            "name": "Initialize containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-09T17:31:06Z",
+            "completed_at": "2026-10-09T17:31:22Z"
+          },
+          {
+            "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-09T17:31:22Z",
+            "completed_at": "2026-10-09T17:31:23Z"
+          },
+          {
+            "name": "Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-09T17:31:23Z",
+            "completed_at": "2026-10-09T17:31:23Z"
+          },
+          {
+            "name": "Test real database migrations, API rules and application restart",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-09T17:31:23Z",
+            "completed_at": "2026-10-09T17:32:14Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-09T17:32:14Z",
+            "completed_at": "2026-10-09T17:32:16Z"
+          },
+          {
+            "name": "Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-09T17:32:16Z",
+            "completed_at": "2026-10-09T17:32:16Z"
+          },
+          {
+            "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-09T17:32:16Z",
+            "completed_at": "2026-10-09T17:32:16Z"
+          },
+          {
+            "name": "Stop containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-10-09T17:32:16Z",
+            "completed_at": "2026-10-09T17:32:17Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-09T17:32:17Z",
+            "completed_at": "2026-10-09T17:32:17Z"
+          }
+        ]
+      }
+    ],
+    "conclusion": "success",
+    "sha": "dd7da8370b040ac4ee8721e147ef2f88db082456",
+    "status": "completed"
+  }
+]

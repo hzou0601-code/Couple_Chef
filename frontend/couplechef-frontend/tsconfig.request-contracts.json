@@ -2,5 +2,5 @@
   "extends": "./tsconfig.json",
   "compilerOptions": { "strict": true, "noEmit": true, "skipLibCheck": true, "types": [] },
   "include": [],
-  "files": ["tests/request-contracts.ts"]
+  "files": ["tests/request-contracts.ts", "types/taro-request-params.d.ts"]
 }
