@@ -1,0 +1,40 @@
+{
+  "package": "@tarojs/taro",
+  "version": "4.1.7",
+  "files": [
+    {
+      "path": "types/api/network/request.d.ts",
+      "beforeSha256": "9a863174694da37759de5e7b1f6f58a0dd0818febfc46d4db72e92d00623560f",
+      "afterSha256": "dfb476dd189241f66ca7a3d9833ed5dc2d660e4ce122de53f59b8935d4087b44",
+      "edits": [
+        {
+          "before": "interface SuccessCallbackResult<T extends string | TaroGeneral.IAnyObject | ArrayBuffer = any | any>",
+          "after": "interface SuccessCallbackResult<T = any | any>"
+        },
+        {
+          "before": "request<T = any, U = any>",
+          "after": "request<T = any, U extends string | TaroGeneral.IAnyObject | ArrayBuffer = any>"
+        }
+      ]
+    },
+    {
+      "path": "types/api/cloud/index.d.ts",
+      "beforeSha256": "9bffac65f01eaff31dda732f963eef74d34bb418df6d9d6a8c672d7914db609a",
+      "afterSha256": "700a49e554560f28d0a6d94fdf0080f1150d983393e192ded2dcac07431bdc5a",
+      "edits": [
+        {
+          "before": "interface CallContainerResult < R extends string | TaroGeneral.IAnyObject | ArrayBuffer = any | any >",
+          "after": "interface CallContainerResult < R = any | any >"
+        },
+        {
+          "before": "\n    callContainer < R = any, P = any >",
+          "after": "\n    callContainer < R = any, P extends string | TaroGeneral.IAnyObject | ArrayBuffer = any >"
+        },
+        {
+          "before": "\n     callContainer < R = any, P = any >",
+          "after": "\n     callContainer < R = any, P extends string | TaroGeneral.IAnyObject | ArrayBuffer = any >"
+        }
+      ]
+    }
+  ]
+}

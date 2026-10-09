@@ -7,23 +7,40 @@ import { dirname, join, resolve } from 'node:path'
 import { applyTypePatches } from '../scripts/apply-type-patches.mjs'
 
 const hash = text => createHash('sha256').update(text).digest('hex')
-function fixture(t) {
+function fixture(t, packageName = '@tarojs/components') {
   const root = mkdtempSync(join(tmpdir(), 'couplechef-types-'))
   t.after(() => {
     assert.equal(dirname(root), resolve(tmpdir()))
     rmSync(root, { recursive: true })
   })
-  const packageRoot = join(root, 'node_modules/@tarojs/components')
+  const packageRoot = join(root, 'node_modules', packageName)
   mkdirSync(join(packageRoot, 'types'), { recursive: true })
   writeFileSync(join(packageRoot, 'package.json'), JSON.stringify({ version: '4.1.7' }))
   const before = "import { StandardProps } from './common'\n"
   const after = "import { StandardProps, CommonEventFunction } from './common'\n"
-  const manifest = { package: '@tarojs/components', version: '4.1.7', files: ['First', 'Second'].map(name => ({
-    path: `types/${name}.d.ts`, beforeSha256: hash(before), afterSha256: hash(after), edits: [{ before, after }],
+  const paths = packageName === '@tarojs/taro' ? ['types/api/network/request.d.ts', 'types/api/cloud/index.d.ts'] : ['types/First.d.ts', 'types/Second.d.ts']
+  const manifest = { package: packageName, version: '4.1.7', files: paths.map(path => ({
+    path, beforeSha256: hash(before), afterSha256: hash(after), edits: [{ before, after }],
   })) }
-  for (const file of manifest.files) writeFileSync(join(packageRoot, file.path), before)
+  for (const file of manifest.files) {
+    mkdirSync(dirname(join(packageRoot, file.path)), { recursive: true })
+    writeFileSync(join(packageRoot, file.path), before)
+  }
   return { root, packageRoot, before, after, manifest }
 }
+
+test('nested API patches retain version/content/path guards and partial-run recovery', t => {
+  const f = fixture(t, '@tarojs/taro')
+  assert.throws(() => applyTypePatches(f.root, { ...f.manifest, files: [{ ...f.manifest.files[0], path: 'types/api/device/sms.d.ts' }] }), /Invalid/)
+  writeFileSync(join(f.packageRoot, f.manifest.files[1].path), 'unknown edit')
+  assert.throws(() => applyTypePatches(f.root, f.manifest), /Unknown/)
+  assert.equal(readFileSync(join(f.packageRoot, f.manifest.files[0].path), 'utf8'), f.before)
+  writeFileSync(join(f.packageRoot, f.manifest.files[1].path), f.after)
+  assert.equal(applyTypePatches(f.root, f.manifest), 1)
+  assert.equal(applyTypePatches(f.root, f.manifest), 0)
+  writeFileSync(join(f.packageRoot, 'package.json'), JSON.stringify({ version: '4.3.0' }))
+  assert.throws(() => applyTypePatches(f.root, f.manifest), /version mismatch/)
+})
 
 test('known originals are repaired, idempotent and recover from partially applied patches', t => {
   const f = fixture(t)

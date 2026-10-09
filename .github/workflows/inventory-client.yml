@@ -46,6 +46,7 @@ jobs:
       - name: Strict inventory types and existing ESLint rules
         run: |
           yarn typecheck:api
+          yarn typecheck:request-contracts
           yarn lint:inventory
           yarn lint:type-patches
       - name: Build WeChat mini-program (example endpoint, no deployment)

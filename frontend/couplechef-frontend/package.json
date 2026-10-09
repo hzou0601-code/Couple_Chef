@@ -19,6 +19,7 @@
     "test:type-patches": "node --test tests/type-patches.test.mjs",
     "lint:type-patches": "eslint scripts/apply-type-patches.mjs tests/type-patches.test.mjs",
     "typecheck:api": "tsc --project tsconfig.inventory.json",
+    "typecheck:request-contracts": "tsc --project tsconfig.request-contracts.json",
     "prepare": "husky",
     "new": "taro new",
     "build:weapp": "taro build --type weapp",

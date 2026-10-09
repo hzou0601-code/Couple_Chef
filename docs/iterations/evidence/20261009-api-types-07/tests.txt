@@ -1,0 +1,39 @@
+(node:59812) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Couple_Chef/frontend/couplechef-frontend/src/features/inventory/listState.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Couple_Chef\frontend\couplechef-frontend\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ combined filters trim the name and preserve today (0) (3.2528ms)
+✔ loading transitions to exact server records, including zero stock and an empty response (0.6697ms)
+✔ newer success cannot be overwritten by older success or failure (0.5417ms)
+✔ latest failure stays visible when an earlier request succeeds; explicit retry can recover (0.3707ms)
+✔ hide/unmount invalidation suppresses late completion; a fresh show loads again (2.8095ms)
+✔ unexpected failures never expose raw diagnostic details (0.569ms)
+(node:58496) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Couple_Chef/frontend/couplechef-frontend/src/api/storageClient.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\D:\Couple_Chef\frontend\couplechef-frontend\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ empty inventory remains empty and filter values are encoded with zero days retained (5.4854ms)
+✔ CRUD uses API data directly and preserves optimistic version including zero (1.55ms)
+✔ HTTP 400 preserves stable backend error code and never retries a write (1.6404ms)
+✔ HTTP 404 preserves stable backend error code and never retries a write (2.4499ms)
+✔ HTTP 409 preserves stable backend error code and never retries a write (0.462ms)
+✔ network and timeout reject without exposing raw transport diagnostics or retrying (0.5311ms)
+✔ unstructured server failure is an HTTP error, never a successful empty inventory (0.3601ms)
+✔ invalid success payloads and HTTP-200 business failures cannot become valid inventory (0.8717ms)
+✔ invalid config, identifiers, versions and expiry filters fail before network traffic (1.14ms)
+✔ calendar-invalid expiry dates are rejected and real leap days are retained (1.5323ms)
+✔ nested API patches retain version/content/path guards and partial-run recovery (141.1756ms)
+✔ known originals are repaired, idempotent and recover from partially applied patches (44.2348ms)
+✔ an unknown edit in a later file rejects before modifying any earlier file (37.7658ms)
+✔ changed versions and package/path traversal are rejected (37.4569ms)
+✔ invalid patch content or a mismatched expected result cannot cause partial writes (53.7662ms)
+✔ publication failure leaves complete originals and a rerun can finish (87.2386ms)
+✔ a declaration directory link cannot redirect patches outside the package (22.4703ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 675.1104
