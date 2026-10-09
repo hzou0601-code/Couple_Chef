@@ -1,0 +1,10 @@
+{
+  "runId": "20261009-readme-06",
+  "powershellBlocks": 20,
+  "parseErrors": 0,
+  "relativeLinks": "all exist",
+  "yarnScripts": "all exist",
+  "wechatCli": "--help and open --help exit0; GUI not executed",
+  "businessBuild": "not rerun",
+  "crudAndRestore": "not executed"
+}
