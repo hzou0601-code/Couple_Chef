@@ -17,3 +17,5 @@ A2c拆分C1/C2。本轮唯一T002BV-A2c1：订阅消息成功结果的混合字�
 
 ## 交付
 strict_reviewer最终无P0–P3，建议C1本地限定验收；命名字段/设备订阅准确保留，完整43仍exit2。下一c2按实际平台来源补缺失命名空间，不猜测。提交主题fix(types): align subscription result field types；用户README/compose不提交，本轮远程待按实现SHA记录。
+
+实现36e5cb4已推送；同SHA远程状态存remote-ci.json，尚未确认通过。最终交付页记录提交，本轮释放lease，README/compose仅用户未提交改动。
