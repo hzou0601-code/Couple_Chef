@@ -29,3 +29,7 @@ The local types/taro-request-params.d.ts augmentation fills the missing symbol w
 ## Subscription result index (T002BV-A2c1)
 
 taro-subscribe-4.1.7.json patches one unique success-result index in the locked official declaration. Its value union includes the existing boolean, ISubscribeResult and optional platform fields. Named fields retain their concrete types; dynamic keys require narrowing. The device subscription result stays unchanged. Public contracts cover valid mixed results and reject numeric index values, invalid boolean/result fields and unchecked string reads. Existing exact path, version/SHA and atomic publication guards apply; no runtime JS or dependencies change. subscribeService and other API errors remain separate tasks.
+
+## Observer error field (T002BV-A2c3)
+
+taro-observer-4.1.7.json changes only the base of ObserveCallbackResult to omit the base's required errMsg. The interface's existing optional string errMsg and all geometric fields stay unchanged, matching the documented normal/error distinction in the official locked declaration. No callback or runtime is cast. Exact path, version/SHA and atomic publication remain required; public contracts reject unchecked mandatory-string reads and invalid ratio/error values.

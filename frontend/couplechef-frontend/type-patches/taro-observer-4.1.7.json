@@ -1,0 +1,17 @@
+{
+  "package": "@tarojs/taro",
+  "version": "4.1.7",
+  "files": [
+    {
+      "path": "types/api/wxml/index.d.ts",
+      "beforeSha256": "6045bdeec6a03605d6ad26a526557d82d004f2e1a0af11ee908a963187279718",
+      "afterSha256": "a9f69498c6d1858283218fa9af81da67a3bbee98fda06e469793719c39b8f35a",
+      "edits": [
+        {
+          "before": "interface ObserveCallbackResult extends TaroGeneral.CallbackResult {",
+          "after": "interface ObserveCallbackResult extends Omit<TaroGeneral.CallbackResult, 'errMsg'> {"
+        }
+      ]
+    }
+  ]
+}

@@ -113,3 +113,19 @@ subscribeResult.result = 'accept'
 void subscriptionKept
 void subscriptionMessage
 void unsafeTemplateStatus
+
+const observed: Taro.IntersectionObserver.ObserveCallbackResult = { intersectionRatio: 0.5, time: 1 }
+const missingObserved: Taro.IntersectionObserver.ObserveCallbackResult = { errMsg: 'missing element' }
+const optionalObserverError: string | undefined = observed.errMsg
+// @ts-expect-error an optional error message is not always present
+const mandatoryObserverError: string = observed.errMsg
+// @ts-expect-error optional error messages retain their string type
+missingObserved.errMsg = 123
+// @ts-expect-error ratio remains numeric
+observed.intersectionRatio = 'half'
+Taro.createIntersectionObserver({}).observe('.ingredient', result => {
+  const ratio: number | undefined = result.intersectionRatio
+  void ratio
+})
+void optionalObserverError
+void mandatoryObserverError
