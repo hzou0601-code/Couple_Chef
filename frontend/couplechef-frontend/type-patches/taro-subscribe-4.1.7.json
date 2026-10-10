@@ -1,0 +1,17 @@
+{
+  "package": "@tarojs/taro",
+  "version": "4.1.7",
+  "files": [
+    {
+      "path": "types/api/open-api/subscribe-message.d.ts",
+      "beforeSha256": "d6a69af6229a45343d2588a45ec0bed6ad0f133164402ceb3069032d6e0843aa",
+      "afterSha256": "cf151310532dda3773e56d65ab3a0c6d83bd297dadf186d2a289434f24376b27",
+      "edits": [
+        {
+          "before": "[TEMPLATE_ID: string]: keyof TemplateReflex | string\n      /** 用户订阅操作结果。",
+          "after": "[TEMPLATE_ID: string]: keyof TemplateReflex | string | boolean | ISubscribeResult | undefined\n      /** 用户订阅操作结果。"
+        }
+      ]
+    }
+  ]
+}

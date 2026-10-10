@@ -1,0 +1,12 @@
+yarn install v1.22.22
+[1/4] Resolving packages...
+(node:58412) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+success Already up-to-date.
+$ node scripts/apply-type-patches.mjs
+Applied 0 @tarojs/components declaration patches (others already applied)
+Applied 0 @tarojs/taro declaration patches (others already applied)
+Applied 0 @tarojs/taro declaration patches (others already applied)
+Applied 0 @tarojs/taro declaration patches (others already applied)
+$ husky
+.git can't be foundDone in 2.75s.

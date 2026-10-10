@@ -86,3 +86,30 @@ const typedInterceptorOptions: Taro.request.Option<{ success: boolean }> = {
 interceptorChain.proceed(typedInterceptorOptions)
 // @ts-expect-error explicit response type keeps callback payload validation
 interceptorChain.proceed<{ success: boolean }>({ url: '/api/storage', success: result => { const invalid: number = result.data.success; void invalid } })
+
+const subscribeResult: Taro.requestSubscribeMessage.SuccessCallbackResult = {
+  errMsg: 'requestSubscribeMessage:ok',
+  exampleTemplate: 'accept',
+  keep: true,
+  refuse: false,
+  show: true,
+  result: { subscribeEntityIds: [], subscribedEntityIds: [], unsubscribedEntityIds: [], currentSubscribedEntityIds: [] },
+}
+const subscriptionKept: boolean | undefined = subscribeResult.keep
+const subscriptionMessage: string = subscribeResult.errMsg
+const dynamicSubscription = subscribeResult['exampleTemplate']
+if (typeof dynamicSubscription === 'string') {
+  const templateStatus: string = dynamicSubscription
+  void templateStatus
+}
+// @ts-expect-error dynamic keys can refer to optional platform fields and require narrowing
+const unsafeTemplateStatus: string = subscribeResult['exampleTemplate']
+// @ts-expect-error named boolean fields retain their concrete types
+subscribeResult.keep = 'yes'
+// @ts-expect-error arbitrary numeric subscription values are invalid
+subscribeResult['otherTemplate'] = 123
+// @ts-expect-error structured subscription result cannot be replaced with a string
+subscribeResult.result = 'accept'
+void subscriptionKept
+void subscriptionMessage
+void unsafeTemplateStatus
